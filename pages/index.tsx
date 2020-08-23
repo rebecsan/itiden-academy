@@ -10,13 +10,13 @@ export default function Home() {
         <title>Itiden Academy</title>
       </Head>
 
-      <header>
-        <img src="/logosm.svg"></img>
-        <div className="bg-purple-700 absolute top-0 right-0" /* <-- inset*/>academy@itiden.se</div>
-        <section className="">
+      <header className="flex justify-between">
+        <img className="self-start" src="/logosm.svg"></img>
+        <section className="self-end py-40">
           <img src="/itiden.svg" alt="itiden logo"></img>
           <h1 className="uppercase">Kursnamn - Hämtas från json</h1>
         </section>
+        <div className="bg-purple-700 flex mt-5 h-6 py-1 px-6 rounded-full"><span className="self-center">academy@itiden.se</span></div>
       </header>
 
       <main className="flex-grow">
@@ -27,7 +27,7 @@ export default function Home() {
         </article>
       </main>
 
-      <footer className="lg:flex bg-gray-900 text-gray-400 border-t border-purple-700">
+      <footer className="lg:flex justify-between bg-gray-900 text-gray-400 border-t border-purple-700">
         <section>
           <img src="/itidensm.svg" alt="itiden logo"></img>
           <h1 className="uppercase">Kursnamn - Hämtas från json</h1>

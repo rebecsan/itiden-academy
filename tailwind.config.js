@@ -28,9 +28,6 @@ module.exports = {
         },
       }
     },
-    flex: {
-      expand: '1 0 auto',
-    }
   },
   variants: {},
   plugins: [],
