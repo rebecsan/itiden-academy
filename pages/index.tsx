@@ -10,42 +10,46 @@ export default function Home() {
         <title>Itiden Academy</title>
       </Head>
 
-      <header className="flex justify-between">
-        <img className="self-start" src="/logosm.svg"></img>
-        <section className="self-end py-40">
+      <header className="flex flex-wrap justify-between px-4">
+        <div className="flex w-1/2">
+          <img className="flex-grow-0" src="/logosm.svg"></img>
+        </div>
+        <div className="flex w-1/2">
+          <div className="bg-purple-700 w-48 flex mt-5 h-6 py-1 px-6 rounded-full"><span className="self-center">academy@itiden.se</span></div>
+        </div>
+        <section className="w-full py-40 md:hidden">
           <img src="/itiden.svg" alt="itiden logo"></img>
           <h1 className="uppercase">Kursnamn - Hämtas från json</h1>
         </section>
-        <div className="bg-purple-700 flex mt-5 h-6 py-1 px-6 rounded-full"><span className="self-center">academy@itiden.se</span></div>
       </header>
 
       <main className="flex-grow">
         <article className="bg-gray-700">
-          <h3>vecka - lektion</h3>
-          <h2 className="text-gray-200">Titel</h2>
-          <p className="bg-gray-600">Här ska det finnas utbildningsmaterial...</p>
+          <h3 className="px-4">vecka - lektion</h3>
+          <h2 className="text-gray-200 px-4">Titel</h2>
+          <p className="bg-gray-600 px-4">Här ska det finnas utbildningsmaterial...</p>
         </article>
       </main>
 
       <footer className="lg:flex justify-between bg-gray-900 text-gray-400 border-t border-purple-700">
-        <section>
+        <section className="px-4">
           <img src="/itidensm.svg" alt="itiden logo"></img>
           <h1 className="uppercase">Kursnamn - Hämtas från json</h1>
         </section>
-        <section>
+        <section className="px-4">
           <h3>Kursansvariga</h3>
           <a href="mailto:andreas@itiden.se">Andreas Bergqvist</a>
           <a href="mailto:filip@itiden.se">Filip Engberg</a>
         </section>
-        <section>
+        <section className="px-4">
           Adress
         </section>
-        <section className="flex">
+        <section className="flex px-4">
           <img src="/fb.svg"></img>
           <img src="/linkedin.svg"></img>
           <img src="/instagram.svg"></img>
         </section>
-        <button>Light/Dark</button>
+        <button className="px-4">Light/Dark</button>
       </footer>
     </div>
     </div>
