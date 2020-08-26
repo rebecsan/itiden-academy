@@ -8,25 +8,19 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus laoreet sed neque in facilisis lacus. A eget egestas mauris est. Laoreet est etiam massa luctus id tincidunt duis pellentesque. Neque mi amet sem elementum et vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus laoreet sed neque in facilisis lacus. A eget egestas mauris est. Laoreet est etiam massa luctus id tincidunt duis pellentesque. Neque mi amet sem elementum et vulputate.",
       "links": [
         {
-          "title": "Videos",
-          "items": {
-            "title": "What is React?",
-            "url": "https://reactjs.org/"
-          }
+          "category": "Videos",
+          "title": "What is React?",
+          "url": "https://reactjs.org/"
         },
         {
-          "title": "Videos",
-          "items": {
-            "title": "React 101?",
-            "url": "https://reactjs.org/tutorial/tutorial.html"
-          }
+          "category": "Videos",
+          "title": "React 101?",
+          "url": "https://reactjs.org/tutorial/tutorial.html"
         },
         {
-          "title": "Övrigt",
-          "items": {
-            "title": "React from dummy to pro in a week",
-            "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
-          }
+          "category": "Övrigt",
+          "title": "React from dummy to pro in a week",
+          "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
         }
       ]
     },
@@ -37,18 +31,14 @@
       "description": " Mauris vel efficitur turpis, quis malesuada eros. Morbi tristique tellus nec urna accumsan vehicula. Phasellus blandit nulla ut risus pellentesque ullamcorper. Sed ut nibh sit amet justo faucibus convallis non sed ex. In mollis magna nec mauris tempor facilisis. Fusce eget mi vel odio hendrerit porta. Phasellus malesuada leo eu quam faucibus imperdiet. Nullam eu nibh convallis, congue est mattis, tincidunt augue. Nullam vitae facilisis ligula. Curabitur pellentesque in ipsum id tincidunt. Nam convallis eleifend risus vitae egestas. Nam ultrices nunc eu tincidunt tristique. <br/> Nullam feugiat ullamcorper sagittis. Pellentesque eu mauris nunc. Proin urna neque, volutpat sit amet maximus in, bibendum et nisl. Aenean vulputate nisl non ligula malesuada elementum. Donec hendrerit leo porttitor pharetra ultrices. Vestibulum ultricies, risus in tincidunt vulputate, sem elit rutrum libero, nec sollicitudin urna augue ut est. Pellentesque at auctor neque, vitae scelerisque nisl. Proin accumsan ipsum at neque pulvinar tincidunt. Praesent a egestas odio. Quisque tempor quis nisi ut ornare. Sed consequat aliquet libero eget dapibus. Aliquam ligula nisl, suscipit id iaculis a, accumsan non mauris. Mauris leo mi, elementum quis semper a, consectetur at nisl. <br/> Suspendisse ac dui convallis, maximus est a, ultricies nisl. Integer placerat sapien a neque ornare lobortis. Quisque tristique velit nec libero pretium feugiat. Fusce mollis, nunc quis aliquet iaculis, ante massa facilisis sapien, ut rhoncus tellus risus sed lorem. Duis pharetra velit velit, in consequat tellus pharetra vel. Fusce congue justo felis, a lacinia est porttitor vel. Nunc faucibus nibh diam, nec eleifend purus rhoncus dictum. Phasellus fermentum nisi vel justo fermentum ultrices tempus vitae ante. Integer bibendum felis dolor, et venenatis tellus gravida sit amet. Suspendisse sed placerat ante. Fusce sit amet pharetra nisl. Praesent commodo ligula non condimentum fermentum.",
       "links": [
         {
-          "title": "Videos",
-          "items": {
-            "title": "Getting started with React",
-            "url": "https://reactjs.org/"
-          }
+          "category": "Videos",
+          "title": "Getting started with React",
+          "url": "https://reactjs.org/"
         },
         {
-          "title": "Övrigt",
-          "items": {
-            "title": "React basics",
-            "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
-          }
+          "category": "Övrigt",
+          "title": "React basics",
+          "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
         }
       ]
     }
