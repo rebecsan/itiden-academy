@@ -28,8 +28,7 @@ export interface HomeProps {
   allCoursesData: Course[];
 }
 
-const Home: React.FC<HomeProps> = ({ allCoursesData }) => (
-  <div className="bg-gray-800 text-gray-300 ">
+const Home: React.FC<HomeProps> = ({ allCoursesData }) => 
     <div className="container flex flex-col min-h-screen">
       <Head>
         <meta name="viewport" content="width=device-width" />
@@ -46,8 +45,7 @@ const Home: React.FC<HomeProps> = ({ allCoursesData }) => (
 
       <Footer />
     </div>
-  </div>
-);
+;
 
 export default Home;
 

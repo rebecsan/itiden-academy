@@ -3,7 +3,7 @@ import { HomeProps } from "../pages";
 export const Header: React.FC<HomeProps> = ({ allCoursesData }) => (
   <>
     <header className="flex flex-wrap justify-between px-4">
-      <div className="flex ">
+      <div className="flex">
         <img className="flex-grow-0" src="/logosm.svg"></img>
       </div>
       <div className="flex ">
@@ -12,7 +12,7 @@ export const Header: React.FC<HomeProps> = ({ allCoursesData }) => (
         </div>
       </div>
       <section className="flex flex-col w-full py-24 md:hidden">
-        <img className="self-center" src="/itiden.svg" alt="itiden logo"></img>
+        <img className="self-center mb-3" src="/itiden.svg" alt="itiden logo"></img>
         {allCoursesData.map(({ courseId }) => (
           <h1 className="self-center uppercase" key={courseId}>
             {courseId}

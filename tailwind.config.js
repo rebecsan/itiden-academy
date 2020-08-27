@@ -23,10 +23,14 @@ module.exports = {
           '700': '#504DD2',
         },
         teal: {
-          '400': '#5CFFF5'
+          '400': '#5CFFF5',
         },
       }
     },
+    fontFamily: {
+      'roboto': ['Roboto', 'sans-serif'],
+      'document': ['Open Sans', 'sans-serif']
+    }
   },
   variants: {},
   plugins: [],

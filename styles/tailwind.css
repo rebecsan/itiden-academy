@@ -1,6 +1,39 @@
 /* purgecss start ignore */
 @tailwind base;
 
+body {
+  @apply font-document;
+  @apply text-gray-300;
+  @apply bg-gray-800 ;
+}
+
+h1 {
+  @apply text-2xl;
+  @apply font-roboto;
+}
+
+h2 {
+  @apply text-2xl;
+  @apply text-gray-200;
+  @apply leading-8;
+}
+
+h3 {
+  @apply text-sm;
+  @apply leading-5;
+}
+
+h4 {
+  @apply text-sm;
+  @apply text-gray-400;
+  @apply leading-4;
+}
+
+a {
+  @apply text-teal-400;
+  @apply underline;
+}
+
 @tailwind components;
 /* purgecss end ignore */
 
