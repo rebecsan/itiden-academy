@@ -6,8 +6,8 @@ export const Header: React.FC<HomeProps> = ({ allCoursesData }) => (
       <div className="flex">
         <img className="flex-grow-0" src="/logosm.svg"></img>
       </div>
-      <div className="flex ">
-        <div className="bg-purple-700 w-48 flex mt-5 h-6 py-1 px-6 rounded-full">
+      <div>
+        <div className="bg-purple-700 w-48 flex mt-5 max-h-6 py-1 px-6 rounded-full">
           <span className="self-center">academy@itiden.se</span>
         </div>
       </div>

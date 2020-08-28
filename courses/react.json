@@ -9,18 +9,25 @@
       "links": [
         {
           "category": "Videos",
-          "title": "What is React?",
-          "url": "https://reactjs.org/"
-        },
-        {
-          "category": "Videos",
-          "title": "React 101?",
-          "url": "https://reactjs.org/tutorial/tutorial.html"
+          "items": [
+            {
+              "title": "What is React?",
+              "url": "https://reactjs.org/"
+            },
+            {
+              "title": "React 101?",
+              "url": "https://reactjs.org/tutorial/tutorial.html"
+            }
+          ]
         },
         {
           "category": "Övrigt",
-          "title": "React from dummy to pro in a week",
-          "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
+          "items": [
+            {
+              "title": "React from dummy to pro in a week",
+              "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
+            }
+          ]
         }
       ]
     },
@@ -32,15 +39,23 @@
       "links": [
         {
           "category": "Videos",
-          "title": "Getting started with React",
-          "url": "https://reactjs.org/"
+          "items": [
+            {
+              "title": "Getting started with React",
+              "url": "https://reactjs.org/"
+            }
+          ]
         },
         {
           "category": "Övrigt",
-          "title": "React basics",
-          "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
+          "items": [
+            {
+              "title": "React basics",
+              "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
+            }
+          ]
         }
-      ]
+      ]      
     }
   ]
 }

@@ -21,6 +21,10 @@ export interface Lesson {
 
 export interface Links {
   category: string;
+  items: Items[];
+}
+
+export interface Items {
   title: string;
   url: string;
 }

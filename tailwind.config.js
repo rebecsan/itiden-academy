@@ -30,9 +30,14 @@ module.exports = {
     fontFamily: {
       'roboto': ['Roboto', 'sans-serif'],
       'document': ['Open Sans', 'sans-serif']
+    },
+    height: {
+      '1px': '1px',
     }
   },
-  variants: {},
+  variants: {
+    padding: ['first', 'last']
+  },
   plugins: [],
   future: {
     removeDeprecatedGapUtilities: true,
