@@ -4,7 +4,7 @@ export const Lessons: React.FC<HomeProps> = ({ allCoursesData }) => (
   <>
     <main
       className="
-       flex-grow"
+       flex-grow mt-64 pt-32"
     >
       {allCoursesData.map(({ courseId, title, lessons }) =>
         lessons.map(({ id, week, subject, description, links }) => (
@@ -29,16 +29,14 @@ export const Lessons: React.FC<HomeProps> = ({ allCoursesData }) => (
                     <div className="h-1px bg-gray-600 flex-grow"></div>
                   </div>
                   {items.map(({ title, url }) => (
-            
-                      <a className="flex pb-4" key={title} href={url}>
-                        {title}
-                        <img
-                          className="pl-3"
-                          src="/linkicon.svg"
-                          alt="open link icon"
-                        />
-                      </a>
-                    
+                    <a className="flex pb-4" key={title} href={url}>
+                      {title}
+                      <img
+                        className="pl-3"
+                        src="/linkicon.svg"
+                        alt="open link icon"
+                      />
+                    </a>
                   ))}
                 </div>
               ))}
