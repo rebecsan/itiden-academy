@@ -36,9 +36,9 @@ export interface HomeProps {
 const Home: React.FC<HomeProps> = ({ allCoursesData }) => (
   <main className="m-auto p-32">
     <h2>Våra kurser</h2>
-    {allCoursesData.map(({ courseId }) => (
+    {allCoursesData.map(({ courseId, title }) => (
       <Link href={courseId} key={courseId}>
-        <a className="text-grey-600">{courseId}</a>
+        <a className="text-grey-600">{title}</a>
       </Link>
     ))}
   </main>
