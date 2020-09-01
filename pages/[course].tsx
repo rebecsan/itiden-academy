@@ -2,11 +2,11 @@
 // import { Header } from "../components/Header";
 // import { Footer } from "../components/Footer";
 import { Lessons } from "../components/Lessons";
-import { getCourseData, getAllCourseIds } from "../lib/getCourses";
+import { getLessonData, getAllCourseIds } from "../lib/getCourses";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { HomeProps } from "../pages";
 
-const Course: React.FC<HomeProps> = ({ allCoursesData }) => (
+const Course: React.FC<HomeProps> = ({ courses: courses }) => (
   <div className="container flex flex-col min-h-screen">
     {/* <Head>
       <meta name="viewport" content="width=device-width" />
@@ -19,8 +19,8 @@ const Course: React.FC<HomeProps> = ({ allCoursesData }) => (
 
     {/* <Header {...{ allCoursesData }} /> */}
 
-    {allCoursesData ? (
-      <Lessons {...{ allCoursesData }} />
+    {courses ? (
+      <Lessons {...{ courses: courses }} />
     ) : (
       <div className="bg-gray-800 flex-grow mx-auto">Loading</div>
     )}
@@ -31,15 +31,19 @@ const Course: React.FC<HomeProps> = ({ allCoursesData }) => (
 export default Course;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllCourseIds();
+  const paths = await getAllCourseIds();
   return {
     paths,
     fallback: false,
   };
 };
 
-export const getStaticProps: GetStaticProps = async (params) => {
-  const courseData = await getCourseData(params.id);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  console.log(params);
+  if (params === undefined) {
+    return { props: {} };
+  }
+  const courseData = await getLessonData(params.course as string);
   return {
     props: {
       courseData,

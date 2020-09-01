@@ -4,9 +4,9 @@ import { Footer } from "../components/Footer";
 import { HomeProps } from "../pages";
 
 const Layout: React.FC<HomeProps> = ({
-  allCoursesData,
+  courses: allCoursesData,
   children,
-  ...pageProps
+  // ,...pageProps
 }) => (
   <div className="container flex flex-col min-h-screen">
     <Head>
@@ -18,11 +18,11 @@ const Layout: React.FC<HomeProps> = ({
       <title>Itiden Academy</title>
     </Head>
 
-    <Header {...{ allCoursesData }} />
+    <Header {...{ courses: allCoursesData }} />
 
     {children}
 
-    <Footer {...{ allCoursesData }} />
+    <Footer {...{ courses: allCoursesData }} />
   </div>
 );
 export default Layout;

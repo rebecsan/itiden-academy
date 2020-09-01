@@ -1,6 +1,6 @@
 import { HomeProps } from "../pages";
 
-export const Footer: React.FC<HomeProps> = ({ allCoursesData }) => (
+export const Footer: React.FC<HomeProps> = ({ courses: allCoursesData }) => (
   <>
     <footer className="flex flex-wrap justify-between bg-gray-900 text-gray-400 border-t border-purple-700 py-6">
       <section className="px-4">

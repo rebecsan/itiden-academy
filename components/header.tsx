@@ -2,7 +2,7 @@ import { HomeProps } from "../pages";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useRef } from "react";
 
-export const Header: React.FC<HomeProps> = ({ allCoursesData }) => {
+export const Header: React.FC<HomeProps> = ({ courses: allCoursesData }) => {
   // Use scroll to animate and minimize header
   const { scrollY } = useViewportScroll();
   // Calculate height of header

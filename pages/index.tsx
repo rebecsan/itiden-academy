@@ -3,7 +3,7 @@ import Link from "next/link";
 // import { Header } from "../components/Header";
 // import { Footer } from "../components/Footer";
 // import { Lessons } from "../components/Lessons";
-import { getCoursesData } from "../lib/getCourses";
+import { getCoursesData, getLessonData } from "../lib/getCourses";
 import { GetStaticProps } from "next";
 
 export interface Course {
@@ -30,13 +30,13 @@ export interface Items {
   url: string;
 }
 export interface HomeProps {
-  allCoursesData: Course[];
+  courses: Course[];
 }
 
-const Home: React.FC<HomeProps> = ({ allCoursesData }) => (
+const Home: React.FC<HomeProps> = ({ courses: courses }) => (
   <main className="m-auto p-32">
     <h2>Våra kurser</h2>
-    {allCoursesData.map(({ courseId, title }) => (
+    {courses.map(({ courseId, title }) => (
       <Link href={courseId} key={courseId}>
         <a className="text-grey-600">{title}</a>
       </Link>
@@ -46,10 +46,10 @@ const Home: React.FC<HomeProps> = ({ allCoursesData }) => (
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allCoursesData = await getCoursesData();
+  const allCourses = await getCoursesData();
   return {
     props: {
-      allCoursesData,
+      courses: allCourses,
     },
   };
 };

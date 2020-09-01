@@ -1,12 +1,13 @@
 import { HomeProps } from "../pages";
 
-export const Lessons: React.FC<HomeProps> = ({ allCoursesData }) => (
+export const Lessons: React.FC<HomeProps> = ({ courses: allCoursesData }) => (
   <>
     <main
       className="
        flex-grow mt-64 pt-32"
     >
-      {allCoursesData.map(({ courseId, title, lessons }) =>
+      Course
+      {/* {allCoursesData.map(({ courseId, title, lessons }) =>
         lessons.map(({ id, week, subject, description, links }) => (
           <article className="bg-gray-700 mb-10" key={id}>
             <div className="flex justify-between px-4">
@@ -43,7 +44,7 @@ export const Lessons: React.FC<HomeProps> = ({ allCoursesData }) => (
             </section>
           </article>
         ))
-      )}
+      )} */}
     </main>
   </>
 );
