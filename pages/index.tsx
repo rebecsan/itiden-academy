@@ -1,7 +1,8 @@
-import Head from "next/head";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import { Lessons } from "../components/Lessons";
+// import Head from "next/head";
+import Link from "next/link";
+// import { Header } from "../components/Header";
+// import { Footer } from "../components/Footer";
+// import { Lessons } from "../components/Lessons";
 import { getCoursesData } from "../lib/getCourses";
 import { GetStaticProps } from "next";
 
@@ -32,26 +33,16 @@ export interface HomeProps {
   allCoursesData: Course[];
 }
 
-const Home: React.FC<HomeProps> = ({ allCoursesData }) => 
-    <div className="container flex flex-col min-h-screen">
-      <Head>
-        <meta name="viewport" content="width=device-width" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/> 
-        <title>Itiden Academy</title>
-      </Head>
-
-      <Header {...{ allCoursesData }} />
-
-      {allCoursesData ? (
-        <Lessons {...{ allCoursesData }} />
-      ) : (
-        <div className="bg-gray-800 flex-grow mx-auto">Loading</div>
-      )}
-
-      <Footer {...{ allCoursesData }} />
-    </div>
-;
-
+const Home: React.FC<HomeProps> = ({ allCoursesData }) => (
+  <main className="m-auto p-32">
+    <h2>Våra kurser</h2>
+    {allCoursesData.map(({ courseId }) => (
+      <Link href={courseId} key={courseId}>
+        <a className="text-grey-600">{courseId}</a>
+      </Link>
+    ))}
+  </main>
+);
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {

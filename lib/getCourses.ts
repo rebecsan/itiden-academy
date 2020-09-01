@@ -3,9 +3,9 @@ import path from "path";
 import { Course } from "../pages";
 
 const coursesDirectory = path.join(process.cwd(), "courses");
+const courseNames = fs.readdirSync(coursesDirectory);
 
 export function getCoursesData(): Course[] {
-  const courseNames = fs.readdirSync(coursesDirectory);
   const allCoursesData = courseNames.map((courseName) => {
     // Use filename as courseId
     const courseId = courseName.replace(/\.json/, "");
@@ -21,4 +21,14 @@ export function getCoursesData(): Course[] {
     };
   });
   return allCoursesData;
+}
+
+export function getAllCourseIds() {
+  return courseNames.map((courseName) => {
+    return {
+      params: {
+        id: courseName.replace(/\.json/, ""),
+      },
+    };
+  });
 }

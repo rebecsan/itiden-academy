@@ -51,11 +51,11 @@ export const Header: React.FC<HomeProps> = ({ allCoursesData }) => {
             src="/itiden.svg"
             alt="itiden logo"
           ></img>
-          {allCoursesData.map(({ courseId }) => (
+          {/* {allCoursesData.map(({ courseId }) => (
             <h1 className="self-center uppercase" key={courseId}>
               {courseId}
             </h1>
-          ))}
+          ))} */}
         </motion.section>
       </header>
     </>

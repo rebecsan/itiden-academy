@@ -1,13 +1,13 @@
 import { HomeProps } from "../pages";
 
-export const Footer:React.FC<HomeProps> = ({allCoursesData}) => (
+export const Footer: React.FC<HomeProps> = ({ allCoursesData }) => (
   <>
     <footer className="flex flex-wrap justify-between bg-gray-900 text-gray-400 border-t border-purple-700 py-6">
       <section className="px-4">
         <img src="/itidensm.svg" alt="itiden logo"></img>
-        {allCoursesData.map(({courseId}) => (
+        {/* {allCoursesData.map(({courseId}) => (
           <h1 className="uppercase text-base" key={courseId}>{courseId}</h1>
-        ))}
+        ))} */}
       </section>
       <section>
         <button className="px-4">Light/Dark</button>
