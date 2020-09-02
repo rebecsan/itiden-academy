@@ -7,7 +7,7 @@ export const LessonsPage: React.FC<Lessons> = ({
     <main className="flex-grow mt-64 pt-32">
       {lessons
         ? lessons.map(({ id, week, subject, description, links }) => (
-            <article className="bg-gray-700 mb-10" key={id}>
+            <article className="bg-gray-700 mb-10" key={id} id={`${id}`}>
               <div className="flex justify-between px-4">
                 <div className="py-3">
                   <h3>
