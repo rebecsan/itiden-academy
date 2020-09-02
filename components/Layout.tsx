@@ -3,11 +3,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { HomeProps } from "../pages";
 
-const Layout: React.FC<HomeProps> = ({
-  courses: allCoursesData,
-  children,
-  // ,...pageProps
-}) => (
+const Layout: React.FC<HomeProps> = ({ courses: allCoursesData, children }) => (
   <div className="container flex flex-col min-h-screen">
     <Head>
       <meta name="viewport" content="width=device-width" />
@@ -15,7 +11,7 @@ const Layout: React.FC<HomeProps> = ({
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap"
         rel="stylesheet"
       />
-      <title>Itiden Academy</title>
+      <title>itiden Academy</title>
     </Head>
 
     <Header {...{ courses: allCoursesData }} />

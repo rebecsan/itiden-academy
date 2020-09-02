@@ -23,9 +23,15 @@ export const Footer: React.FC<HomeProps> = ({ courses: allCoursesData }) => (
         411 41 Göteborg
       </section>
       <section className="flex self-end px-4">
-        <img src="/fb.svg"></img>
-        <img className="px-4" src="/linkedin.svg"></img>
-        <img src="/instagram.svg"></img>
+        <a href="https://www.facebook.com/itiden">
+          <img src="/fb.svg"></img>
+        </a>
+        <a href="https://www.linkedin.com/company/itiden/">
+          <img className="px-4" src="/linkedin.svg"></img>
+        </a>
+        <a href="https://www.instagram.com/itidenab/">
+          <img src="/instagram.svg"></img>
+        </a>
       </section>
     </footer>
   </>

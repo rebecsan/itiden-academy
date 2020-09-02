@@ -28,7 +28,7 @@ export const Header: React.FC<HomeProps> = ({ courses: allCoursesData }) => {
         ref={header}
         className="fixed inset-x-0 flex flex-wrap justify-between px-4"
       >
-        {/* Make triangle shrink up */}
+        {/* Make triangle shrink upwards */}
         <motion.div
           className="flex"
           style={{
