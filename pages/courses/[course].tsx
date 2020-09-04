@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import { LessonArticle } from "../../components/Lesson";
 import { getLessonData, getAllCourseIds } from "../../lib/getCourses";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -8,7 +7,6 @@ import { useRouter } from "next/router";
 
 const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   const router = useRouter();
-  console.log(router.query.lesson);
   const { lesson: lessonid } = router.query;
 
   return (

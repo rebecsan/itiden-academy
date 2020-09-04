@@ -1,4 +1,3 @@
-// import Link from "next/link";
 import { Lesson } from "../pages";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -6,13 +5,7 @@ import { useRouter } from "next/router";
 export const LessonArticle: React.FC<{
   initialExpand: boolean;
   lesson: Lesson;
-}> = ({
-  initialExpand,
-  lesson,
-}: {
-  initialExpand: boolean;
-  lesson: Lesson;
-}) => {
+}> = ({ initialExpand, lesson }) => {
   const [expand, setExpand] = useState(initialExpand);
   useEffect(() => {
     setExpand(initialExpand);
@@ -20,16 +13,14 @@ export const LessonArticle: React.FC<{
 
   const router = useRouter();
   const updateURL = (lessonId: number) => {
-    router.push("/courses/react", router.basePath + "?lesson=" + lessonId, {
+    // Remove previous query params and replace with new
+    let currentPath = router.asPath;
+    let splitPath = currentPath.split("?");
+    let newPath = splitPath[0] + "?lesson=" + lessonId;
+    router.push(newPath, undefined, {
       shallow: true,
     });
   };
-  // const updateURL = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-  //   router.push({
-  //     pathname: "/" + router.asPath,
-  //     query: e.currentTarget.id,
-  //   });
-  // };
 
   return (
     <>
@@ -54,8 +45,6 @@ export const LessonArticle: React.FC<{
             alt="collapse section icon"
           />
         </section>
-        {/* Om collapseicon klickas: toggle setstate, expandera div och uppdatera url
-                    Om url [course]#id finns: expandera div*/}
         <div className={expand ? "block" : "hidden"}>
           <div className="bg-gray-600">
             <p className="px-4 py-3">{lesson.description}</p>
