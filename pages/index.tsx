@@ -11,6 +11,7 @@ export type Lessons = {
   lessons: Lesson[];
 };
 export type Lesson = {
+  courseId: string;
   id: number;
   week: number;
   subject: string;
@@ -35,7 +36,7 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
   <main className="m-auto p-32">
     <h2>Våra kurser</h2>
     {courses.map(({ courseId, title }) => (
-      <Link href={"courses/" + courseId} key={courseId}>
+      <Link href="courses/[course]" as={`/courses/${courseId}`} key={courseId}>
         <a className="text-grey-600">{title}</a>
       </Link>
     ))}

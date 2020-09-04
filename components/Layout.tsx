@@ -6,7 +6,10 @@ import { HomeProps } from "../pages";
 const Layout: React.FC<HomeProps> = ({ courses: allCoursesData, children }) => (
   <div className="container flex flex-col min-h-screen">
     <Head>
-      <meta name="viewport" content="width=device-width" />
+      <meta
+        name="viewport"
+        content="width=device-width, minimum-scale=1, initial-scale=1"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap"
         rel="stylesheet"
