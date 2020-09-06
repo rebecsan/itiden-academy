@@ -22,16 +22,23 @@ export const LessonArticle: React.FC<{
     });
   };
 
+  const scrollTo = (ref: HTMLElement) => {
+    if (ref) {
+      ref.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
       <article
         onClick={() => {
           setExpand(!expand);
-          updateURL(lesson.id);
+          // updateURL(lesson.id);
         }}
         className="bg-gray-700 mb-10"
-        key={lesson.id}
         id={`${lesson.id}`}
+        key={lesson.id}
+        ref={scrollTo}
       >
         <section className="flex justify-between px-4">
           <div className="py-3">
