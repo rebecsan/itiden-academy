@@ -1,9 +1,7 @@
 import Head from "next/head";
-import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { HomeProps } from "../pages";
 
-const Layout: React.FC<HomeProps> = ({ courses: allCoursesData, children }) => (
+const Layout: React.FC = ({ children }) => (
   <div className="container flex flex-col min-h-screen">
     <Head>
       <meta
@@ -17,11 +15,9 @@ const Layout: React.FC<HomeProps> = ({ courses: allCoursesData, children }) => (
       <title>itiden Academy</title>
     </Head>
 
-    <Header {...{ courses: allCoursesData }} />
-
     {children}
 
-    <Footer {...{ courses: allCoursesData }} />
+    <Footer />
   </div>
 );
 export default Layout;

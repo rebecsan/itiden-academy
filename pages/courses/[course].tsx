@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Header } from "../../components/Header";
 import { LessonArticle } from "../../components/Lesson";
 import { getLessonData, getAllCourseIds } from "../../lib/getCourses";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -12,8 +13,9 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   return (
     <>
       <Head>
-        <title>{courseData.title + " " + " itiden Academy"}</title>
+        <title>{courseData.title + " - itiden Academy"}</title>
       </Head>
+      <Header {...{ subTitle: courseData.title }} />
       <main className="flex-grow mt-64 pt-32">
         {courseData.lessons ? (
           courseData.lessons.map((lesson) => (

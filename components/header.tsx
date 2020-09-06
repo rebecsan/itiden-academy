@@ -1,8 +1,8 @@
-import { HomeProps } from "../pages";
+import { Course } from "../pages";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useRef } from "react";
 
-export const Header: React.FC<HomeProps> = ({ courses: allCoursesData }) => {
+export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
   // Use scroll to animate and minimize header
   const { scrollY } = useViewportScroll();
   // Calculate height of header
@@ -57,11 +57,7 @@ export const Header: React.FC<HomeProps> = ({ courses: allCoursesData }) => {
             src="/itiden.svg"
             alt="itiden logo"
           ></img>
-          {/* {allCoursesData.map(({ courseId }) => (
-            <h1 className="self-center uppercase" key={courseId}>
-              {courseId}
-            </h1>
-          ))} */}
+          {subTitle && <h1 className="self-center uppercase">{subTitle}</h1>}
         </motion.section>
       </header>
     </>
