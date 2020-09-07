@@ -3,12 +3,22 @@ import { Header } from "../../components/Header";
 import { LessonArticle } from "../../components/Lesson";
 import { getLessonData, getAllCourseIds } from "../../lib/getCourses";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { Course } from "../../pages";
+import { Course } from "..";
 import { useRouter } from "next/router";
 
 const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   const router = useRouter();
   const { lesson: lessonid } = router.query;
+
+  function handleLessonClick(id: number) {
+    // Remove previous query params and replace with new
+    let currentPath = router.asPath;
+    let splitPath = currentPath.split("?");
+    let newPath = splitPath[0] + "?lesson=" + id;
+    router.push(newPath, undefined, {
+      shallow: true,
+    });
+  }
 
   return (
     <>
@@ -16,13 +26,14 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
         <title>{courseData.title + " - itiden Academy"}</title>
       </Head>
       <Header {...{ subTitle: courseData.title }} />
-      <main className="flex-grow mt-64 pt-32">
+      <main className="flex-grow">
         {courseData.lessons ? (
           courseData.lessons.map((lesson) => (
             <LessonArticle
               key={lesson.id}
+              onClick={handleLessonClick}
               {...{
-                initialExpand: Number(lessonid) === lesson.id,
+                expand: Number(lessonid) === lesson.id,
                 lesson,
               }}
             />

@@ -1,27 +1,11 @@
 import { Lesson } from "../pages";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 
 export const LessonArticle: React.FC<{
-  initialExpand: boolean;
   lesson: Lesson;
-}> = ({ initialExpand, lesson }) => {
-  const [expand, setExpand] = useState(initialExpand);
-  useEffect(() => {
-    setExpand(initialExpand);
-  }, [initialExpand]);
-
-  const router = useRouter();
-  const updateURL = (lessonId: number) => {
-    // Remove previous query params and replace with new
-    let currentPath = router.asPath;
-    let splitPath = currentPath.split("?");
-    let newPath = splitPath[0] + "?lesson=" + lessonId;
-    router.push(newPath, undefined, {
-      shallow: true,
-    });
-  };
-
+  expand: boolean;
+  onClick(id: number): void;
+}> = ({ lesson, expand, onClick }) => {
+  // Scroll to expanded lesson
   const scrollTo = (ref: HTMLElement) => {
     if (ref) {
       ref.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -32,14 +16,14 @@ export const LessonArticle: React.FC<{
     <>
       <article
         onClick={() => {
-          setExpand(!expand);
-          // updateURL(lesson.id);
+          onClick(lesson.id);
         }}
         className="bg-gray-700 mb-10"
         id={`${lesson.id}`}
         key={lesson.id}
         ref={scrollTo}
       >
+        {/* Lesson info with title and week */}
         <section className="flex justify-between px-4">
           <div className="py-3">
             <h3>
@@ -52,18 +36,24 @@ export const LessonArticle: React.FC<{
             alt="collapse section icon"
           />
         </section>
+        {/* Lesson description and links */}
         <div className={expand ? "block" : "hidden"}>
+          {/* Description */}
           <div className="bg-gray-600">
             <p className="px-4 py-3">{lesson.description}</p>
           </div>
+          {/* Links */}
           <section className="px-4 py-5">
             {lesson.links.map(({ category, items }) => (
               <div className="flex flex-col" key={category}>
                 <div className="flex">
+                  {/* Category title */}
                   <h4 className="pr-3 pb-3">{category}</h4>
+                  {/* Line on left side of category title */}
                   <div className="h-1px bg-gray-600 flex-grow"></div>
                 </div>
                 {items.map(({ title, url }) => (
+                  //
                   <a className="flex pb-4" key={title} href={url}>
                     {title}
                     <img
