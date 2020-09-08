@@ -19,7 +19,7 @@ export const LessonArticle: React.FC<{
           onClick(lesson.id);
         }}
         className="bg-gray-700 mb-10"
-        id={`${lesson.id}`}
+        id={`lesson${lesson.id}`}
         key={lesson.id}
         ref={scrollTo}
       >
@@ -50,11 +50,15 @@ export const LessonArticle: React.FC<{
                   {/* Category title */}
                   <h4 className="pr-3 pb-3">{category}</h4>
                   {/* Line on left side of category title */}
-                  <div className="h-1px bg-gray-600 flex-grow"></div>
+                  <div className="h-1px bg-gray-600 flex-grow align-middle"></div>
                 </div>
                 {items.map(({ title, url }) => (
                   //
-                  <a className="flex pb-4" key={title} href={url}>
+                  <a
+                    className="flex pb-4  text-teal-400 underline;"
+                    key={title}
+                    href={url}
+                  >
                     {title}
                     <img
                       className="pl-3"

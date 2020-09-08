@@ -10,8 +10,12 @@ export const Footer: React.FC = () => (
       </section>
       <section className="flex flex-col px-4 w-full">
         <h3>Kursansvariga</h3>
-        <a href="mailto:andreas@itiden.se">Andreas Bergqvist</a>
-        <a href="mailto:filip@itiden.se">Filip Engberg</a>
+        <a href="mailto:andreas@itiden.se" className="text-teal-400 underline">
+          Andreas Bergqvist
+        </a>
+        <a href="mailto:filip@itiden.se" className="text-teal-400 underline">
+          Filip Engberg
+        </a>
       </section>
       <section className="px-4">
         0709-597008 <br />

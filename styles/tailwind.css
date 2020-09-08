@@ -30,15 +30,6 @@ h4 {
   @apply leading-4;
 }
 
-header {
-  top: 0;
-}
-
-a {
-  @apply text-teal-400;
-  @apply underline;
-}
-
 @tailwind components;
 /* purgecss end ignore */
 

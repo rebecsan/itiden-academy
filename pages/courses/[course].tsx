@@ -26,7 +26,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
         <title>{courseData.title + " - itiden Academy"}</title>
       </Head>
       <Header {...{ subTitle: courseData.title }} />
-      <main className="flex-grow">
+      <main className="flex-grow z-10 pt-64">
         {courseData.lessons ? (
           courseData.lessons.map((lesson) => (
             <LessonArticle
