@@ -18,10 +18,11 @@ export const LessonArticle: React.FC<{
         onClick={() => {
           onClick(lesson.id);
         }}
-        className="bg-gray-700 mb-10"
+        className="bg-gray-700 mb-10 'scroll-margin-top': '4rem'"
         id={`lesson${lesson.id}`}
         key={lesson.id}
         ref={scrollTo}
+        // style={{ "scroll-margin-top": "4rem" }}
       >
         {/* Lesson info with title and week */}
         <section className="flex justify-between px-4">
@@ -46,11 +47,13 @@ export const LessonArticle: React.FC<{
           <section className="px-4 py-5">
             {lesson.links.map(({ category, items }) => (
               <div className="flex flex-col" key={category}>
-                <div className="flex">
+                <div className="flex mb-3">
                   {/* Category title */}
-                  <h4 className="pr-3 pb-3">{category}</h4>
+                  <h4 className="pr-3">{category}</h4>
                   {/* Line on left side of category title */}
-                  <div className="h-1px bg-gray-600 flex-grow align-middle"></div>
+                  {/* <div className=" flex flex-col justify-center"> */}
+                  <div className="decorationLine h-1px bg-gray-600 flex-grow m-auto"></div>
+                  {/* </div> */}
                 </div>
                 {items.map(({ title, url }) => (
                   //
