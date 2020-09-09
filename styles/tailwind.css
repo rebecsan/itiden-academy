@@ -30,6 +30,10 @@ h4 {
   @apply leading-4;
 }
 
+article {
+  scroll-margin-top: 3.5rem;
+}
+
 @tailwind components;
 /* purgecss end ignore */
 

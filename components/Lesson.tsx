@@ -38,10 +38,10 @@ export const LessonArticle: React.FC<{
           />
         </section>
         {/* Lesson description and links */}
-        <div className={expand ? "block" : "hidden"}>
+        <section className={expand ? "block" : "hidden"}>
           {/* Description */}
           <div className="bg-gray-600">
-            <p className="px-4 py-3">{lesson.description}</p>
+            <p className="px-4 py-3 md:col-count-2">{lesson.description}</p>
           </div>
           {/* Links */}
           <section className="px-4 py-5">
@@ -73,7 +73,7 @@ export const LessonArticle: React.FC<{
               </div>
             ))}
           </section>
-        </div>
+        </section>
       </article>
     </>
   );
