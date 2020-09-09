@@ -11,13 +11,18 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   const { lesson: lessonid } = router.query;
 
   function handleLessonClick(id: number) {
-    // Remove previous query params and replace with new
+    // Remove query param and if id != query.lesson: replace with new
     let currentPath = router.asPath;
     let splitPath = currentPath.split("?");
+    let noQueryPath = splitPath[0];
     let newPath = splitPath[0] + "?lesson=" + id;
-    router.push(newPath, undefined, {
-      shallow: true,
-    });
+    router.query.lesson !== id.toString()
+      ? router.push(newPath, undefined, {
+          shallow: true,
+        })
+      : router.push(noQueryPath, undefined, {
+          shallow: true,
+        });
   }
 
   return (
