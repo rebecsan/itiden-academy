@@ -22,7 +22,6 @@ export const LessonArticle: React.FC<{
         id={`lesson${lesson.id}`}
         key={lesson.id}
         ref={scrollTo}
-        // style={{ "scroll-margin-top": "4rem" }}
       >
         {/* Lesson info with title and week */}
         <section className="flex justify-between px-4">
@@ -46,19 +45,17 @@ export const LessonArticle: React.FC<{
           {/* Links */}
           <section className="px-4 py-5">
             {lesson.links.map(({ category, items }) => (
-              <div className="flex flex-col" key={category}>
+              <div className="flex flex-col items-start" key={category}>
                 <div className="flex mb-3">
                   {/* Category title */}
                   <h4 className="pr-3">{category}</h4>
                   {/* Line on left side of category title */}
-                  {/* <div className=" flex flex-col justify-center"> */}
                   <div className="decorationLine h-1px bg-gray-600 flex-grow m-auto"></div>
-                  {/* </div> */}
                 </div>
                 {items.map(({ title, url }) => (
-                  //
+                  // Render each link with linkicon
                   <a
-                    className="flex pb-4  text-teal-400 underline;"
+                    className="flex pb-4 text-teal-400 underline;"
                     key={title}
                     href={url}
                   >
