@@ -32,16 +32,16 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             src="/logosm.svg"
           ></img>
           {/* Shrink purple e-mail box */}
-          <motion.div
-            className="fixed right-0 z-20 max-w-5xl mr-4"
-            style={{ scale: linkScale }}
-          >
-            <div className="bg-purple-700 w-48 flex mt-5 max-h-6 py-1 px-6 rounded-full">
+          <div className="fixed flex flex-col max-w-5xl left-0 right-0 mx-auto w-screen z-20">
+            <motion.div
+              className="bg-purple-700 self-end w-48 flex mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full"
+              style={{ scale: linkScale }}
+            >
               <a href="mailto:academy@itiden.se" className="self-center">
                 academy@itiden.se
               </a>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
           {/* Shrink and change opacity on itiden-logo and page title */}
           <motion.section
             className={
