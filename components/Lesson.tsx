@@ -18,7 +18,7 @@ export const LessonArticle: React.FC<{
         onClick={() => {
           onClick(lesson.id);
         }}
-        className="bg-gray-700 mb-10 w-screen  lg:max-w-5xl"
+        className="bg-gray-700 mb-10 w-screen lg:max-w-5xl"
         id={`lesson${lesson.id}`}
         key={lesson.id}
         ref={scrollTo}
