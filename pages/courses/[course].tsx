@@ -15,7 +15,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
     let currentPath = router.asPath;
     let splitPath = currentPath.split("?");
     let noQueryPath = splitPath[0];
-    let newPath = splitPath[0] + "?lesson=" + id;
+    let newPath = noQueryPath + "?lesson=" + id;
     router.query.lesson !== id.toString()
       ? router.push(newPath, undefined, {
           shallow: true,
@@ -31,7 +31,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
         <title>{courseData.title + " - itiden Academy"}</title>
       </Head>
       <Header {...{ subTitle: courseData.title }} />
-      <main className="flex-grow z-10 pt-64">
+      <main className="flex-grow z-10 pt-64 max-w-5xl mx-auto">
         {courseData.lessons ? (
           courseData.lessons.map((lesson) => (
             <LessonArticle

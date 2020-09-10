@@ -1,6 +1,10 @@
 /* purgecss start ignore */
 @tailwind base;
 
+main {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", "sans-serif";
   color: #d6d6d6;

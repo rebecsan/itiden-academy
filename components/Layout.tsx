@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Footer } from "../components/Footer";
 
 const Layout: React.FC = ({ children }) => (
-  <div className="mx-auto flex flex-col min-h-screen max-w-5xl">
+  <div className="flex flex-col min-h-screen">
     <Head>
       <meta
         name="viewport"

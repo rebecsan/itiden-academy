@@ -26,17 +26,21 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
     <>
       <header
         ref={header}
-        className="inset-x-0 flex flex-wrap justify-between mx-4 top-0 lg:m-0"
+        className="flex place-content-between max-w-5xl mx-auto top-0"
       >
         {/* Purple logo */}
-        <img className="flex-grow-0" src="/logosm.svg"></img>
+        {/* <div> */}
+        <img className="flex-grow-0 " src="/logosm.svg"></img>
+        {/* </div> */}
         {/* Shrink purple e-mail box */}
         <motion.div
-          className="fixed right-0 z-20 mr-4"
+          className="fixed right-0 z-20 max-w-5xl mr-4"
           style={{ scale: linkScale }}
         >
           <div className="bg-purple-700 w-48 flex mt-5 max-h-6 py-1 px-6 rounded-full">
-            <span className="self-center">academy@itiden.se</span>
+            <a href="mailto:academy@itiden.se" className="self-center">
+              academy@itiden.se
+            </a>
           </div>
         </motion.div>
         {/* Shrink and change opacity on itiden-logo and page title */}
