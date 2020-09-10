@@ -2,32 +2,32 @@
 @tailwind base;
 
 body {
-  @apply font-document;
-  @apply text-gray-300;
-  @apply bg-gray-800;
+  font-family: "Open Sans", "sans-serif";
+  color: #d6d6d6;
+  background-color: #181818;
 }
 
 h1 {
-  @apply text-2xl;
-  @apply font-roboto;
-  @apply leading-8;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  line-height: 2rem;
 }
 
 h2 {
-  @apply text-2xl;
-  @apply text-gray-200;
-  @apply leading-8;
+  font-size: 1.5rem;
+  color: #ebebeb;
+  line-height: 2rem;
 }
 
 h3 {
-  @apply text-sm;
-  @apply leading-5;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 h4 {
-  @apply text-sm;
-  @apply text-gray-400;
-  @apply leading-4;
+  font-size: 0.875rem;
+  color: #808080;
+  line-height: 1rem;
 }
 
 article {
