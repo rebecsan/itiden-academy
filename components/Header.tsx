@@ -53,7 +53,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             style={{ opacity: logoOpacity, scale: linkScale }}
           >
             <img
-              className="self-center mb-3 mr-4"
+              className="self-center mb-3"
               src="/itiden.svg"
               alt="itiden logo"
             ></img>
