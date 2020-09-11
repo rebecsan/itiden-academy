@@ -11,6 +11,9 @@ html {
   overflow: scroll;
   scrollbar-width: none; /* Hide scrollbar Firefox */
   -ms-overflow-style: none; /* Hide scrollbar IE 10+ */
+  font-family: "Open Sans", "sans-serif";
+  color: #d6d6d6;
+  background-color: #181818;
 }
 
 /* Hide scrollbar Chrome, Safari */
@@ -19,11 +22,11 @@ html {
   background: transparent; /* make scrollbar transparent */
 }
 
-body {
+/* body {
   font-family: "Open Sans", "sans-serif";
   color: #d6d6d6;
   background-color: #181818;
-}
+} */
 
 h1 {
   font-size: 1.5rem;
