@@ -20,6 +20,10 @@ html {
   background: transparent; /* make scrollbar transparent */
 }
 
+body {
+  background-color: #181818;
+}
+
 .pagelayout {
   font-family: "Open Sans", "sans-serif";
   color: #d6d6d6;
