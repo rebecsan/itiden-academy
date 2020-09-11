@@ -7,7 +7,7 @@ export const Footer: React.FC = () => (
           {/* <h1 className="uppercase text-base">{courseId}</h1> */}
         </section>
         <section>
-          <button className="px-4">Light/Dark</button>
+          <div className=""></div>
         </section>
         <section className="flex flex-col items-start px-4 w-full">
           <h3>Kursansvariga</h3>

@@ -1,8 +1,17 @@
 /* purgecss start ignore */
 @tailwind base;
 
-main {
+html {
   scroll-behavior: smooth;
+  overflow: scroll;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar IE 10+ */
+}
+
+/* Hide scrollbar Chrome, Safari */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 body {
