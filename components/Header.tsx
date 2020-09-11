@@ -28,7 +28,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
         {/* Purple logo */}
         <div className="flex justify-between">
           <img
-            className="flex-grow-0 justify-self-start mx-4 top-0"
+            className="flex-grow-0 justify-self-start mx-4 lg:mx-0 top-0"
             src="/logosm.svg"
           ></img>
           {/* <motion.div className="div">
