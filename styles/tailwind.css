@@ -1,6 +1,11 @@
 /* purgecss start ignore */
 @tailwind base;
 
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
   overflow: scroll;
@@ -46,8 +51,3 @@ h4 {
 article {
   scroll-margin-top: 3.5rem;
 }
-
-@tailwind components;
-/* purgecss end ignore */
-
-@tailwind utilities;

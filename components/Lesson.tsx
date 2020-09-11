@@ -43,19 +43,19 @@ export const LessonArticle: React.FC<{
             <p className="px-4 py-3 md:col-count-2">{lesson.description}</p>
           </div>
           {/* Links */}
-          <section className="px-4 py-5">
+          <section className="px-4 pt-5 pb-1">
             {lesson.links.map(({ category, items }) => (
               <div className="flex flex-col items-start" key={category}>
                 <div className="flex mb-3">
                   {/* Category title */}
                   <h4 className="pr-3">{category}</h4>
                   {/* Line on left side of category title */}
-                  <div className="decorationLine h-1px bg-gray-600 flex-grow m-auto"></div>
+                  <div className="h-1px bg-gray-600 flex-grow w-screen max-w-full m-auto"></div>
                 </div>
                 {items.map(({ title, url }) => (
                   // Render each link with linkicon
                   <a
-                    className="flex pb-4 text-teal-400 underline;"
+                    className="flex pb-4 text-teal-400 underline"
                     key={title}
                     href={url}
                   >

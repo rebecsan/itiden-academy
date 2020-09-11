@@ -24,13 +24,16 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
 
   return (
     <>
-      <header ref={header} className="w-screen max-w-5xl mx-auto">
+      <header ref={header} className="w-screen max-w-5xl mx-auto top-0">
         {/* Purple logo */}
         <div className="flex justify-between">
           <img
-            className="flex-grow-0 justify-self-start mx-4"
+            className="flex-grow-0 justify-self-start mx-4 top-0"
             src="/logosm.svg"
           ></img>
+          {/* <motion.div className="div">
+            
+          </motion.div> */}
           {/* Shrink purple e-mail box */}
           <div className="fixed flex flex-col max-w-5xl left-0 right-0 mx-auto w-screen z-20">
             <motion.div
