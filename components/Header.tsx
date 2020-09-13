@@ -13,7 +13,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
     ? useTransform(
         scrollY,
         (headerScrollPos) =>
-          (headerHeight() - headerScrollPos * 3) / headerHeight()
+          (headerHeight() - headerScrollPos * 1.4) / headerHeight()
       )
     : 1;
 
