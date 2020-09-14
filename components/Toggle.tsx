@@ -8,7 +8,7 @@ export const Toggle: React.FC = () => {
       : document.documentElement.classList.remove("mode-dark");
   }
   return (
-    <section className="relative">
+    <section className="relative md:hidden">
       <input
         type="checkbox"
         id="toggle"

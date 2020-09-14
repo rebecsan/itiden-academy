@@ -3,15 +3,15 @@ import { Toggle } from "./Toggle";
 export const Footer: React.FC = () => (
   <>
     <footer className="bg-gray-900 text-gray-400 border-t border-purple-700 py-6">
-      <div className="max-w-5xl px-4 mx-auto flex flex-wrap justify-between ">
+      <div className="max-w-5xl px-4 mx-auto flex flex-wrap justify-between md:flex-1 md:flex-no-wrap">
         <section>
           <img src="/itidensm.svg" alt="itiden logo"></img>
           {/* <h1 className="uppercase text-base">{courseId}</h1> */}
         </section>
         <Toggle />
         {/* Line between sections */}
-        <div className="h-1px bg-gray-600 w-full mt-4 mb-3"></div>
-        <section className="flex flex-col items-start w-full">
+        <div className="h-1px bg-gray-600 w-full mt-4 mb-3 md:hidden"></div>
+        <section className="flex flex-col items-start w-full md:w-auto">
           <h3>Kursansvariga</h3>
           <a
             href="mailto:andreas@itiden.se"
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => (
           </a>
         </section>
         {/* Line between sections */}
-        <div className="h-1px bg-gray-600 mt-4 mb-3 w-full"></div>
+        <div className="h-1px bg-gray-600 mt-4 mb-3 w-full md:hidden"></div>
         <section>
           0709-597008 <br />
           Kungstorget 11-12 <br />
