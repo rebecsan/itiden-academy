@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Header } from "../../components/Header";
 import { LessonArticle } from "../../components/Lesson";
 import { getLessonData, getAllCourseIds } from "../../lib/getCourses";
+import Layout from "../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Course } from "..";
 import { useRouter } from "next/router";
@@ -26,7 +27,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   }
 
   return (
-    <>
+    <Layout>
       <Head>
         <title>{courseData.title + " - itiden Academy"}</title>
       </Head>
@@ -47,7 +48,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
           <div className="bg-gray-800 flex-grow m-auto p-32">No data</div>
         )}
       </main>
-    </>
+    </Layout>
   );
 };
 export default CoursePage;

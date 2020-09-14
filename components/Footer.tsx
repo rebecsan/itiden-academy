@@ -1,3 +1,7 @@
+import { useTheme } from "../lib/themeContext";
+
+const { toggleTheme } = useTheme();
+
 export const Footer: React.FC = () => (
   <>
     <footer className="bg-gray-900 text-gray-400 border-t border-purple-700 py-6">
@@ -7,7 +11,7 @@ export const Footer: React.FC = () => (
           {/* <h1 className="uppercase text-base">{courseId}</h1> */}
         </section>
         <section>
-          <div className=""></div>
+          <button onClick={toggleTheme}>Toggle</button>
         </section>
         <section className="flex flex-col items-start px-4 w-full">
           <h3>Kursansvariga</h3>

@@ -1,11 +1,12 @@
 import type { AppProps } from "next/app";
-import Layout from "../components/Layout";
+// import Layout from "../components/Layout";
+import ThemeProvider from "../lib/themeContext";
 import "../styles/tailwind.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Layout {...pageProps}>
+  <ThemeProvider {...pageProps}>
     <Component {...pageProps} />
-  </Layout>
+  </ThemeProvider>
 );
 
 export default MyApp;

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getCoursesData } from "../lib/getCourses";
 import { GetStaticProps } from "next";
+import Layout from "../components/Layout";
 import { Header } from "../components/Header";
 
 export type Course = {
@@ -36,7 +37,7 @@ export type HomeProps = {
 };
 
 const Home: React.FC<HomeProps> = ({ courses: courses }) => (
-  <>
+  <Layout>
     <Header />
     <main className="flex flex-col items-center m-auto p-32 z-10">
       <h2 className="center text-3xl">Våra kurser:</h2>
@@ -52,7 +53,7 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
         </Link>
       ))}
     </main>
-  </>
+  </Layout>
 );
 export default Home;
 
