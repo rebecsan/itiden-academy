@@ -1,15 +1,17 @@
+import { Toggle } from "./Toggle";
+
 export const Footer: React.FC = () => (
   <>
     <footer className="bg-gray-900 text-gray-400 border-t border-purple-700 py-6">
-      <div className="max-w-5xl mx-auto flex flex-wrap justify-between ">
-        <section className="px-4">
-          <img src="/itidensm.svg" alt="itiden logo"></img>
+      <div className="max-w-5xl px-4 mx-auto flex flex-wrap justify-between ">
+        <section>
+          <img src="/itidensm.svg" alt="itiden logo" className="my-1"></img>
           {/* <h1 className="uppercase text-base">{courseId}</h1> */}
         </section>
-        <section>
-          <div className=""></div>
-        </section>
-        <section className="flex flex-col items-start px-4 w-full">
+        <Toggle />
+        {/* Line between sections */}
+        <div className="h-1px bg-gray-600 w-full mt-4 mb-3"></div>
+        <section className="flex flex-col items-start w-full">
           <h3>Kursansvariga</h3>
           <a
             href="mailto:andreas@itiden.se"
@@ -21,12 +23,14 @@ export const Footer: React.FC = () => (
             Filip Engberg
           </a>
         </section>
-        <section className="px-4">
+        {/* Line between sections */}
+        <div className="h-1px bg-gray-600 mt-4 mb-3 w-full"></div>
+        <section>
           0709-597008 <br />
           Kungstorget 11-12 <br />
           411 41 Göteborg
         </section>
-        <section className="flex self-end px-4">
+        <section className="flex self-end">
           <a href="https://www.facebook.com/itiden">
             <img src="/fb.svg"></img>
           </a>
