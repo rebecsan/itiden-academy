@@ -5,7 +5,7 @@ export const Footer: React.FC = () => (
     <footer className="bg-gray-900 text-gray-400 border-t border-purple-700 py-6">
       <div className="max-w-5xl px-4 mx-auto flex flex-wrap justify-between ">
         <section>
-          <img src="/itidensm.svg" alt="itiden logo" className="my-1"></img>
+          <img src="/itidensm.svg" alt="itiden logo"></img>
           {/* <h1 className="uppercase text-base">{courseId}</h1> */}
         </section>
         <Toggle />
