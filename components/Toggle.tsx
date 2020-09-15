@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export const Toggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState(true);
-  // const [checked, setChecked] = useState(true);
   function onToggle() {
     setDarkMode(!darkMode);
+  }
+
+  useEffect(() => {
     // Add or remove class "mode-dark" from html root
     darkMode
-      ? document.documentElement.classList.remove("mode-dark")
-      : document.documentElement.classList.add("mode-dark");
-  }
+      ? document.documentElement.classList.add("mode-dark")
+      : document.documentElement.classList.remove("mode-dark");
+  }, [darkMode]);
+
   return (
     <section className="relative md:hidden">
       <input
         type="checkbox"
         id="toggle"
         className="checkbox"
-        // defaultChecked={checked}
-        // onChange={() => setChecked(!checked)}
+        checked={darkMode}
         onClick={onToggle}
       />
       <label
