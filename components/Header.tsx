@@ -37,10 +37,13 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
           {/* Shrink purple e-mail box */}
           <div className="fixed flex flex-col max-w-5xl left-0 right-0 mx-auto w-screen z-20">
             <motion.div
-              className="bg-purple-700 self-end w-48 flex mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full"
+              className="bg-purple-700 shadow-custom self-end w-48 flex mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full"
               style={{ scale: linkScale }}
             >
-              <a href="mailto:academy@itiden.se" className="self-center">
+              <a
+                href="mailto:academy@itiden.se"
+                className="self-center text-lightblue"
+              >
                 academy@itiden.se
               </a>
             </motion.div>
@@ -52,10 +55,23 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             }
             style={{ opacity: logoOpacity, scale: linkScale }}
           >
+            {/* <img
+            src={
+              document.documentElement.classList.contains("mode-dark")
+                ? "/itiden.svg"
+                : "/itidendark.svg"
+            }
+            alt="itiden logo"
+          ></img> */}
             <img
-              className="self-center mb-3"
+              className="self-center mb-3 dark:block hidden "
               src="/itiden.svg"
               alt="itiden logo"
+            ></img>
+            <img
+              className="self-center mb-3 block dark:hidden"
+              src="/itidendark.svg"
+              alt="itiden dark logo"
             ></img>
             {subTitle && (
               <h1 className="self-center uppercase mr-4">{subTitle}</h1>

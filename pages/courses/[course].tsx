@@ -44,7 +44,9 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
             />
           ))
         ) : (
-          <div className="bg-gray-800 flex-grow m-auto p-32">No data</div>
+          <div className="bg-gray-100 dark:bg-gray-800 flex-grow m-auto p-32">
+            No data
+          </div>
         )}
       </main>
     </>

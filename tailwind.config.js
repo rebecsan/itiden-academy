@@ -1,6 +1,9 @@
 module.exports = {
   purge: [],
   theme: {
+    boxShadow: {
+      custom: "0px 4px 4px rgba(0, 0, 0, 0.16)",
+    },
     columnCount: [1, 2, 3],
     extend: {
       colors: {
@@ -15,7 +18,7 @@ module.exports = {
           600: "#2D2D2D",
           700: "#242424",
           800: "#181818",
-          900: "#121212",
+          900: "#0C0C0C",
         },
         purple: {
           700: "#504DD2",
@@ -23,6 +26,7 @@ module.exports = {
         teal: {
           400: "#5CFFF5",
         },
+        lightblue: "#F5F8FF",
       },
     },
     fontFamily: {

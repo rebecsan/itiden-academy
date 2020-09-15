@@ -21,20 +21,20 @@ html {
 }
 
 body {
+  background-color: #f4f4f4;
+}
+
+.mode-dark body {
   background-color: #181818;
 }
 
 .pagelayout {
   font-family: "Open Sans", "sans-serif";
-  color: #d6d6d6;
-}
-
-.mode-dark body {
-  background-color: #f4f4f4;
+  color: #2d2d2d;
 }
 
 .mode-dark .pagelayout {
-  color: #2d2d2d;
+  color: #d6d6d6;
 }
 
 h1 {
@@ -45,8 +45,12 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  color: #ebebeb;
   line-height: 2rem;
+  color: #2d2d2d;
+}
+
+.mode-dark h2 {
+  color: #ebebeb;
 }
 
 h3 {
@@ -56,8 +60,12 @@ h3 {
 
 h4 {
   font-size: 0.875rem;
-  color: #808080;
+  color: #505050;
   line-height: 1rem;
+}
+
+.mode-dark h4 {
+  color: #808080;
 }
 
 article {
@@ -90,10 +98,14 @@ article {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  background-color: #2d2d2d;
+  background-color: #ffffff;
   top: 2px;
   left: 2px;
   transition: all 0.3s;
+}
+
+.mode-dark .switch::after {
+  background-color: #2d2d2d;
 }
 
 .checkbox:checked + .switch::after {

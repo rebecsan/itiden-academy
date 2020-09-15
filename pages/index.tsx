@@ -47,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
           key={courseId}
         >
           <h2 className="p-20 underline ">
-            <a className="text-grey-600 cursor-pointer">{title}</a>
+            <a className="cursor-pointer">{title}</a>
           </h2>
         </Link>
       ))}
