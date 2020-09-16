@@ -15,7 +15,9 @@ export const Footer: React.FC = () => {
             ></img>
             {/* <h1 className="uppercase text-base">{courseId}</h1> */}
           </section>
-          <Toggle />
+          <div className="md:hidden">
+            <Toggle />
+          </div>
           {/* Line between sections */}
           <div className="h-1px bg-gray-300 dark:bg-gray-600 w-full my-4 md:hidden"></div>
           <section className="flex flex-col items-start w-full md:w-auto">
@@ -41,16 +43,21 @@ export const Footer: React.FC = () => {
             <br />
             411 41 Göteborg
           </section>
-          <section className="flex self-end">
-            <a href="https://www.facebook.com/itiden">
-              <img src="/fb.svg"></img>
-            </a>
-            <a href="https://www.linkedin.com/company/itiden/">
-              <img className="px-4" src="/linkedin.svg"></img>
-            </a>
-            <a href="https://www.instagram.com/itidenab/">
-              <img src="/instagram.svg"></img>
-            </a>
+          <section className="flex flex-col">
+            <div className="hidden md:block">
+              <Toggle />
+            </div>
+            <div className="flex flex-row self-end">
+              <a href="https://www.facebook.com/itiden">
+                <img src="/fb.svg"></img>
+              </a>
+              <a href="https://www.linkedin.com/company/itiden/">
+                <img className="px-4" src="/linkedin.svg"></img>
+              </a>
+              <a href="https://www.instagram.com/itidenab/">
+                <img src="/instagram.svg"></img>
+              </a>
+            </div>
           </section>
         </div>
       </footer>
