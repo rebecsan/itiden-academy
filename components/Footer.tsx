@@ -1,9 +1,8 @@
 import { Toggle } from "./Toggle";
-import { useContext } from "react";
-import DarkmodeContext from "../utils/themeContext";
+import { useDarkMode } from "../utils/themeContext";
 
 export const Footer: React.FC = () => {
-  const isDarkMode = useContext(DarkmodeContext);
+  const { isDarkMode } = useDarkMode();
 
   return (
     <>

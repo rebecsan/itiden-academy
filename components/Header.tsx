@@ -1,9 +1,9 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useRef, useContext } from "react";
-import DarkmodeContext from "../utils/themeContext";
+import { useRef } from "react";
+import { useDarkMode } from "../utils/themeContext";
 
 export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
-  const { isDarkMode } = useContext(DarkmodeContext)!;
+  const { isDarkMode } = useDarkMode();
   // Use scroll to animate header with Framer motion
   const { scrollY } = useViewportScroll();
   // Calculate height of header
@@ -27,7 +27,6 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
   const logoScale = useTransform(scrollY, (headerScrollPos) =>
     Math.max(0.6, 1 - (0.1 * headerScrollPos) / headerHeight())
   );
-  console.log("header " + isDarkMode);
 
   return (
     <>
