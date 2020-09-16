@@ -60,12 +60,18 @@ export const LessonArticle: React.FC<{
                     href={url}
                   >
                     {title}
-                    <div className="pl-3 hidden dark:block">
+                    <div className="pl-3 inline self-center">
+                      <img
+                        src={"mode - dark" ? "/linkicon.svg" : "/linkicon.svg"}
+                        alt="open link icon"
+                      />
+                    </div>
+                    {/* <div className="pl-3 hidden dark:inline self-center">
                       <img src="/linkicon.svg" alt="open link icon" />
                     </div>
-                    <div className="pl-3 dark:hidden">
+                    <div className="pl-3 inline dark:hidden">
                       <img src="/linkiconlight.svg" alt="open link icon" />
-                    </div>
+                    </div> */}
                   </a>
                 ))}
               </div>
