@@ -27,7 +27,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   }
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>{courseData.title + " - itiden Academy"}</title>
       </Head>
@@ -50,7 +50,7 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
           </div>
         )}
       </main>
-    </Layout>
+    </>
   );
 };
 export default CoursePage;

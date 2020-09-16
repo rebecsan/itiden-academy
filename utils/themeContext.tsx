@@ -1,28 +1,40 @@
-import React from "react";
-
-const initialTheme = {};
-
-const ThemeContext = React.createContext(initialTheme);
+import { createContext, useEffect, useState, useContext } from "react";
 
 type Props = {
   children: React.ReactNode;
 };
 
-export const ThemeProvider = ({ children }: Props) => {
-  const [theme, setTheme] = React.useState(initialTheme);
+type DarkModeContextType = {
+  isDarkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+};
 
-  // React.useEffect(() => {
-  //   // We'd get the theme from a web API / local storage in a real app
-  //   // We've hardcoded the theme in our example
-  //   const currentTheme = "lightblue";
-  //   setTheme(currentTheme);
-  // }, []);
+const DarkModeContext = createContext<DarkModeContextType>({
+  isDarkMode: true,
+  setDarkMode: (value: boolean) => {},
+});
+
+export const DarkModeProvider = ({ children }: Props) => {
+  const [isDarkMode, setDarkMode] = useState(true);
+
+  // useEffect(() => {
+  //   // Toggle darkmode
+  //   isDarkMode ? setDarkMode(false) : setDarkMode(true);
+  // }, [setDarkMode]);
 
   return (
-    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+    <DarkModeContext.Provider value={{ isDarkMode, setDarkMode }}>
+      {children}
+    </DarkModeContext.Provider>
   );
 };
 
-export const useTheme = () => React.useContext(ThemeContext);
+export const useDarkMode = () => {
+  const context = useContext(DarkModeContext);
+  if (!context) {
+    throw new Error(`useDarkMode must be used within a DarkModeProvider`);
+  }
+  return context;
+};
 
-export default ThemeContext;
+export default DarkModeContext;

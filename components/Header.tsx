@@ -1,7 +1,9 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import DarkmodeContext from "../utils/themeContext";
 
 export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
+  const { isDarkMode } = useContext(DarkmodeContext)!;
   // Use scroll to animate header with Framer motion
   const { scrollY } = useViewportScroll();
   // Calculate height of header
@@ -25,6 +27,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
   const logoScale = useTransform(scrollY, (headerScrollPos) =>
     Math.max(0.6, 1 - (0.1 * headerScrollPos) / headerHeight())
   );
+  console.log("header " + isDarkMode);
 
   return (
     <>
@@ -59,23 +62,9 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             }
             style={{ opacity: logoOpacity, scale: logoScale }}
           >
-            {/* <img
-            src={
-              document.documentElement.classList.contains("mode-dark")
-                ? "/itiden.svg"
-                : "/itidendark.svg"
-            }
-            alt="itiden logo"
-          ></img> */}
             <img
-              className="self-center mb-3 dark:block hidden "
-              src="/itiden.svg"
+              src={isDarkMode ? "/itiden.svg" : "/itidendark.svg"}
               alt="itiden logo"
-            ></img>
-            <img
-              className="self-center mb-3 block dark:hidden"
-              src="/itidendark.svg"
-              alt="itiden dark logo"
             ></img>
             {subTitle && <h1 className="self-center uppercase">{subTitle}</h1>}
           </motion.section>

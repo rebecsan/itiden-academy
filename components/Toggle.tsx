@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import DarkmodeContext, { useDarkMode } from "../utils/themeContext";
 export const Toggle: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  //const darkMode = useContext(DarkmodeContext);
+  const { isDarkMode, setDarkMode } = useDarkMode()!;
+  // const [darkMode, setDarkMode] = useState(isDarkMode);
   function onToggle() {
-    setDarkMode(!darkMode);
+    setDarkMode(!isDarkMode);
   }
 
   useEffect(() => {
-    // Add or remove class "mode-dark" from html root
-    darkMode
-      ? document.documentElement.classList.add("mode-dark")
-      : document.documentElement.classList.remove("mode-dark");
-  }, [darkMode]);
+    console.log("isDarkMode toggle är: " + isDarkMode);
+  }, [isDarkMode]);
 
   return (
     <section className="flex flex-col md:hidden">
@@ -18,8 +18,8 @@ export const Toggle: React.FC = () => {
         type="checkbox"
         id="toggle"
         className="checkbox"
-        checked={darkMode}
-        onClick={onToggle}
+        checked={isDarkMode}
+        onChange={onToggle}
       />
       <label
         htmlFor="toggle"
