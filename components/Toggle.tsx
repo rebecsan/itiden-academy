@@ -13,7 +13,7 @@ export const Toggle: React.FC = () => {
   }, [darkMode]);
 
   return (
-    <section className="relative md:hidden">
+    <section className="flex flex-col md:hidden">
       <input
         type="checkbox"
         id="toggle"
@@ -23,9 +23,9 @@ export const Toggle: React.FC = () => {
       />
       <label
         htmlFor="toggle"
-        className="switch bg-purple-700 dark:bg-teal-400"
+        className="switch bg-purple-700 dark:bg-teal-400 self-end"
       ></label>
-      <label htmlFor="toggle" className="">
+      <label htmlFor="toggle" className="mt-2">
         <h3>Ljust/Mörkt</h3>
       </label>
     </section>

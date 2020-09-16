@@ -47,7 +47,8 @@ export const Footer: React.FC = () => (
         <div className="h-1px bg-gray-300 dark:bg-gray-600 mt-5 mb-4 w-full md:hidden"></div>
         <section>
           0709-597008 <br />
-          Kungstorget 11-12 <br />
+          Kungstorget 11–12
+          <br />
           411 41 Göteborg
         </section>
         <section className="flex self-end">
