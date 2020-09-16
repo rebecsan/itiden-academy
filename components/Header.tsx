@@ -73,9 +73,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
               src="/itidendark.svg"
               alt="itiden dark logo"
             ></img>
-            {subTitle && (
-              <h1 className="self-center uppercase mr-4">{subTitle}</h1>
-            )}
+            {subTitle && <h1 className="self-center uppercase">{subTitle}</h1>}
           </motion.section>
         </div>
       </header>

@@ -2,7 +2,7 @@ import { Toggle } from "./Toggle";
 
 export const Footer: React.FC = () => (
   <>
-    <footer className="bg-white text-gray-500 dark:bg-gray-900 dark:text-gray-400 border-t border-purple-700 py-6">
+    <footer className="bg-white text-gray-500 dark:bg-gray-900 dark:text-gray-400 border-t border-purple-700 py-6 bottom-0 mt-6">
       <div className="max-w-5xl px-4 mx-auto flex flex-wrap justify-between md:flex-1 md:flex-no-wrap">
         <section>
           {/* <img
