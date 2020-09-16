@@ -1,34 +1,10 @@
 module.exports = {
   purge: [],
   theme: {
+    boxShadow: {
+      custom: "0px 4px 4px rgba(0, 0, 0, 0.16)",
+    },
     columnCount: [1, 2, 3],
-    columnGap: {
-      // will fallback to 'gap' || 'gridGap' values
-      // sm: '1rem',
-      // md: '1.5rem',
-      // lg: '2rem',
-    },
-    columnWidth: {
-      // sm: '120px',
-      // md: '240px',
-      // lg: '360px',
-    },
-    columnRuleColor: false, // will fallback to `borderColor` values
-    columnRuleWidth: false, // will fallback to `borderWidth` values
-    columnRuleStyle: [
-      "none",
-      "hidden",
-      "dotted",
-      "dashed",
-      "solid",
-      "double",
-      "groove",
-      "ridge",
-      "inset",
-      "outset",
-    ],
-    columnFill: ["auto", "balance", "balance-all"],
-    columnSpan: ["none", "all"],
     extend: {
       colors: {
         gray: {
@@ -42,7 +18,7 @@ module.exports = {
           600: "#2D2D2D",
           700: "#242424",
           800: "#181818",
-          900: "#121212",
+          900: "#0C0C0C",
         },
         purple: {
           700: "#504DD2",
@@ -50,29 +26,7 @@ module.exports = {
         teal: {
           400: "#5CFFF5",
         },
-        muted: "var(--color-muted)",
-        "muted-hover": "var(--color-muted-hover)",
-        primary: "var(--color-primary)",
-        "primary-hover": "var(--color-primary-hover)",
-        secondary: "var(--color-secondary)",
-        "secondary-hover": "var(--color-secondary-hover)",
-        info: "var(--color-info)",
-        "info-hover": "var(--color-info-hover)",
-        success: "var(--color-success)",
-        "success-hover": "var(--color-success-hover)",
-        "success-background": "var(--color-success-background)",
-        warning: "var(--color-warning)",
-        "warning-hover": "var(--color-warning-hover)",
-        "warning-background": "var(--color-warning-background)",
-        danger: "var(--color-danger)",
-        "danger-hover": "var(--color-danger-hover)",
-        "danger-background": "var(--color-danger-background)",
-        background: "var(--color-background)",
-        "background-muted": "var(--color-background-muted)",
-        heading: "var(--color-heading)",
-        "heading-muted": "var(--color-heading-muted)",
-        body: "var(--color-body)",
-        "body-muted": "var(--color-body-muted)",
+        lightblue: "#F5F8FF",
       },
     },
     fontFamily: {
@@ -84,17 +38,18 @@ module.exports = {
     },
   },
   variants: {
+    backgroundColor: ["responsive", "dark"],
+    textColor: ["responsive", "dark"],
     columnCount: ["responsive"],
-    columnGap: ["responsive"],
-    columnWidth: ["responsive"],
-    columnRuleColor: ["responsive"],
-    columnRuleWidth: ["responsive"],
-    columnRuleStyle: ["responsive"],
-    columnFill: ["responsive"],
-    columnSpan: ["responsive"],
     padding: ["first", "last"],
+    margin: ["first", "last"],
   },
-  plugins: [require("tailwindcss-multi-column")()],
+  plugins: [
+    // Divide contents of flex container into several columns
+    require("tailwindcss-multi-column")(),
+    // Add variants for darkmode
+    require("tailwindcss-dark-mode")(),
+  ],
   future: {
     removeDeprecatedGapUtilities: true,
   },

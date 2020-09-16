@@ -39,8 +39,8 @@ export type HomeProps = {
 const Home: React.FC<HomeProps> = ({ courses: courses }) => (
   <Layout>
     <Header />
-    <main className="flex flex-col items-center m-auto p-32 z-10">
-      <h2 className="center text-3xl">Våra kurser:</h2>
+    <main className="flex-grow flex flex-col z-10 pt-64 max-w-5xl mx-auto">
+      <h2 className="self-center text-3xl ">Våra kurser:</h2>
       {courses.map(({ courseId, title }) => (
         <Link
           href="courses/[course]"
@@ -48,7 +48,7 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
           key={courseId}
         >
           <h2 className="p-20 underline ">
-            <a className="text-grey-600 cursor-pointer">{title}</a>
+            <a className="cursor-pointer">{title}</a>
           </h2>
         </Link>
       ))}

@@ -18,7 +18,7 @@ export const LessonArticle: React.FC<{
         onClick={() => {
           onClick(lesson.id);
         }}
-        className="bg-gray-700 mb-10 w-screen lg:max-w-5xl"
+        className="bg-gray-200 dark:bg-gray-700 mb-10 w-screen lg:max-w-5xl"
         id={`lesson${lesson.id}`}
         key={lesson.id}
         ref={scrollTo}
@@ -29,7 +29,7 @@ export const LessonArticle: React.FC<{
             <h3>
               v {lesson.week} - Lektion {lesson.id}
             </h3>
-            <h2 className="text-gray-200">{lesson.subject}</h2>
+            <h2>{lesson.subject}</h2>
           </div>
           <img
             src={expand ? "/collapseicon.svg" : "/expandicon.svg"}
@@ -39,32 +39,39 @@ export const LessonArticle: React.FC<{
         {/* Lesson description and links */}
         <section className={expand ? "block" : "hidden"}>
           {/* Description */}
-          <div className="bg-gray-600">
+          <div className="bg-gray-250 dark:bg-gray-600">
             <p className="px-4 py-3 md:col-count-2">{lesson.description}</p>
           </div>
           {/* Links */}
           <section className="px-4 pt-5 pb-1">
             {lesson.links.map(({ category, items }) => (
               <div className="flex flex-col items-start" key={category}>
-                <div className="flex mb-3">
+                <div className="flex mb-3 w-full">
                   {/* Category title */}
                   <h4 className="pr-3">{category}</h4>
                   {/* Line on left side of category title */}
-                  <div className="h-1px bg-gray-600 flex-grow w-screen max-w-full m-auto"></div>
+                  <div className="h-1px bg-gray-300 dark:bg-gray-600 flex-grow m-auto"></div>
                 </div>
                 {items.map(({ title, url }) => (
                   // Render each link with linkicon
                   <a
-                    className="flex pb-4 text-teal-400 underline"
+                    className="flex pb-4 text-purple-700 dark:text-teal-400 underline"
                     key={title}
                     href={url}
                   >
                     {title}
-                    <img
-                      className="pl-3"
-                      src="/linkicon.svg"
-                      alt="open link icon"
-                    />
+                    <div className="pl-3 inline self-center">
+                      <img
+                        src={"mode - dark" ? "/linkicon.svg" : "/linkicon.svg"}
+                        alt="open link icon"
+                      />
+                    </div>
+                    {/* <div className="pl-3 hidden dark:inline self-center">
+                      <img src="/linkicon.svg" alt="open link icon" />
+                    </div>
+                    <div className="pl-3 inline dark:hidden">
+                      <img src="/linkiconlight.svg" alt="open link icon" />
+                    </div> */}
                   </a>
                 ))}
               </div>
