@@ -20,23 +20,6 @@ html {
   background: transparent; /* make scrollbar transparent */
 }
 
-body {
-  background-color: #f4f4f4;
-}
-
-.mode-dark body {
-  background-color: #181818;
-}
-
-.pagelayout {
-  font-family: "Open Sans", "sans-serif";
-  color: #2d2d2d;
-}
-
-.mode-dark .pagelayout {
-  color: #d6d6d6;
-}
-
 h1 {
   font-size: 1.5rem;
   font-family: Roboto, sans-serif;
