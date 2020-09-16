@@ -9,10 +9,13 @@ type DarkModeContextType = {
   setDarkMode: (value: boolean) => void;
 };
 
-const DarkModeContext = createContext<DarkModeContextType>({
-  isDarkMode: true,
-  setDarkMode: (value: boolean) => {},
-});
+// const DarkModeContext = createContext<DarkModeContextType>({
+//   isDarkMode: true,
+//   setDarkMode: (value: boolean) => {},
+// });
+const DarkModeContext = createContext<DarkModeContextType | undefined>(
+  undefined
+);
 
 export const DarkModeProvider = ({ children }: Props) => {
   const [isDarkMode, setDarkMode] = useState(true);
