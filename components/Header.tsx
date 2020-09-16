@@ -13,7 +13,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
     ? useTransform(
         scrollY,
         (headerScrollPos) =>
-          (headerHeight() - headerScrollPos * 1.4) / headerHeight()
+          (headerHeight() - headerScrollPos * 0.7) / headerHeight()
       )
     : 1;
 
@@ -21,9 +21,9 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
   const linkScale = useTransform(scrollY, (headerScrollPos) =>
     Math.max(0.9, 1 - (0.4 * headerScrollPos) / headerHeight())
   );
-  // Scale down logo to 80% on scroll down
+  // Scale down logo to 60% on scroll down
   const logoScale = useTransform(scrollY, (headerScrollPos) =>
-    Math.max(0.8, 1 - (0.4 * headerScrollPos) / headerHeight())
+    Math.max(0.6, 1 - (0.1 * headerScrollPos) / headerHeight())
   );
 
   return (
