@@ -2,7 +2,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useRef } from "react";
 
 export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
-  // Use scroll to animate header wit Framer motion
+  // Use scroll to animate header with Framer motion
   const { scrollY } = useViewportScroll();
   // Calculate height of header
   const header = useRef<HTMLElement>(null);
@@ -13,13 +13,17 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
     ? useTransform(
         scrollY,
         (headerScrollPos) =>
-          (headerHeight() - headerScrollPos * 1.4) / headerHeight()
+          (headerHeight() - headerScrollPos * 0.7) / headerHeight()
       )
     : 1;
 
-  // Scale down contact link and logo to 80% on scroll down
+  // Scale down contact link to 80% on scroll down
   const linkScale = useTransform(scrollY, (headerScrollPos) =>
-    Math.max(0.8, 1 - (0.4 * headerScrollPos) / headerHeight())
+    Math.max(0.9, 1 - (0.4 * headerScrollPos) / headerHeight())
+  );
+  // Scale down logo to 60% on scroll down
+  const logoScale = useTransform(scrollY, (headerScrollPos) =>
+    Math.max(0.6, 1 - (0.1 * headerScrollPos) / headerHeight())
   );
 
   return (
@@ -53,7 +57,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             className={
               "fixed flex flex-col max-w-5xl py-40 z-0 left-0 right-0 mx-auto"
             }
-            style={{ opacity: logoOpacity, scale: linkScale }}
+            style={{ opacity: logoOpacity, scale: logoScale }}
           >
             {/* <img
             src={
