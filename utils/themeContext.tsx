@@ -17,7 +17,7 @@ const DarkModeContext = createContext<DarkModeContextType | undefined>(
   undefined
 );
 
-export const DarkModeProvider = ({ children }: Props) => {
+export const DarkModeProvider: React.FC<Props> = ({ children }) => {
   const [isDarkMode, setDarkMode] = useState(true);
 
   // const toggleDarkMode = () => {
