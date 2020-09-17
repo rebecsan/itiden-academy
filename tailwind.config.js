@@ -48,7 +48,7 @@ module.exports = {
     // Divide contents of flex container into several columns
     require("tailwindcss-multi-column")(),
     // Add variants for darkmode
-    require("tailwindcss-dark-mode")(),
+    require("@danestves/tailwindcss-darkmode")(),
   ],
   future: {
     removeDeprecatedGapUtilities: true,

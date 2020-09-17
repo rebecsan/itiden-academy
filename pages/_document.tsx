@@ -14,9 +14,10 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="mode-dark">
+      <Html>
         <Head />
-        <body className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-document">
+        <body className="bg-gray-100 text-gray-600 font-document">
+          <script src="noflash.js" />
           <Main />
           <NextScript />
         </body>

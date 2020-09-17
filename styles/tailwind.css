@@ -20,6 +20,11 @@ html {
   background: transparent; /* make scrollbar transparent */
 }
 
+.dark-mode {
+  background-color: #181818;
+  color: #d6d6d6;
+}
+
 h1 {
   font-size: 1.5rem;
   font-family: Roboto, sans-serif;
@@ -32,7 +37,7 @@ h2 {
   color: #2d2d2d;
 }
 
-.mode-dark h2 {
+.dark-mode h2 {
   color: #ebebeb;
 }
 
@@ -47,7 +52,7 @@ h4 {
   line-height: 1rem;
 }
 
-.mode-dark h4 {
+.dark-mode h4 {
   color: #808080;
 }
 
@@ -87,7 +92,7 @@ article {
   transition: all 0.3s;
 }
 
-.mode-dark .switch::after {
+.dark-mode .switch::after {
   background-color: #2d2d2d;
 }
 

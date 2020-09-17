@@ -2,7 +2,6 @@ import Head from "next/head";
 import { Header } from "../../components/Header";
 import { LessonArticle } from "../../components/Lesson";
 import { getLessonData, getAllCourseIds } from "../../lib/getCourses";
-import Layout from "../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Course } from "..";
 import { useRouter } from "next/router";

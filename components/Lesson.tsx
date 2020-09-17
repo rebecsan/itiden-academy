@@ -1,13 +1,12 @@
 import { Lesson } from "../pages";
-import { useRef, useContext } from "react";
-import DarkmodeContext from "../utils/themeContext";
+import useDarkMode from "use-dark-mode";
 
 export const LessonArticle: React.FC<{
   lesson: Lesson;
   expand: boolean;
   onClick(id: number): void;
 }> = ({ lesson, expand, onClick }) => {
-  const isDarkMode = useContext(DarkmodeContext);
+  const darkMode = useDarkMode();
   // Scroll to expanded lesson
   const scrollTo = (ref: HTMLElement) => {
     if (ref) {
@@ -65,7 +64,11 @@ export const LessonArticle: React.FC<{
                     {title}
                     <div className="pl-3 inline self-center">
                       <img
-                        src={isDarkMode ? "/linkicon.svg" : "/linkicon.svg"}
+                        src={
+                          darkMode.value
+                            ? "/linkicon.svg"
+                            : "/linkiconlight.svg"
+                        }
                         alt="open link icon"
                       />
                     </div>
