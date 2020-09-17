@@ -1,8 +1,8 @@
 import { createContext, useState, useContext } from "react";
 
-type Props = {
-  children: React.ReactNode | undefined;
-};
+interface Props {
+  children: React.ReactNode;
+}
 
 type DarkModeContextType = {
   isDarkMode: boolean;
