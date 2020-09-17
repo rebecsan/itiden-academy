@@ -18,6 +18,7 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <body className="bg-gray-100 text-gray-600 font-document">
+          <script src="noflash.js" />
           <Main />
           <NextScript />
         </body>
