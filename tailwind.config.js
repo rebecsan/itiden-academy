@@ -38,8 +38,8 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ["responsive", "dark"],
-    textColor: ["responsive", "dark"],
+    backgroundColor: ["responsive"],
+    textColor: ["responsive"],
     columnCount: ["responsive"],
     padding: ["first", "last"],
     margin: ["first", "last"],
@@ -48,7 +48,7 @@ module.exports = {
     // Divide contents of flex container into several columns
     require("tailwindcss-multi-column")(),
     // Add variants for darkmode
-    require("tailwindcss-dark-mode")(),
+    // require("tailwindcss-dark-mode")(),
   ],
   future: {
     removeDeprecatedGapUtilities: true,
