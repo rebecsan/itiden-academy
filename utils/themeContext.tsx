@@ -1,7 +1,7 @@
 import { createContext, useState, useContext } from "react";
 
 type Props = {
-  children: React.ReactNode;
+  children: React.ReactNode | undefined;
 };
 
 type DarkModeContextType = {
@@ -20,10 +20,11 @@ const DarkModeContext = createContext<DarkModeContextType | undefined>(
 export const DarkModeProvider = ({ children }: Props) => {
   const [isDarkMode, setDarkMode] = useState(true);
 
-  // useEffect(() => {
-  //   // Toggle darkmode
-  //   isDarkMode ? setDarkMode(false) : setDarkMode(true);
-  // }, [setDarkMode]);
+  // const toggleDarkMode = () => {
+  //   isDarkMode ?
+  //     setDarkMode(false) :
+  //     setDarkMode(true)
+  // };
 
   return (
     <DarkModeContext.Provider value={{ isDarkMode, setDarkMode }}>
