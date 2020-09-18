@@ -42,11 +42,7 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
     <main className="flex-grow flex flex-col z-10 pt-64 max-w-5xl mx-auto">
       <h2 className="self-center text-3xl ">Våra kurser:</h2>
       {courses.map(({ courseId, title }) => (
-        <Link
-          href="courses/[course]"
-          as={`/courses/${courseId}`}
-          key={courseId}
-        >
+        <Link href="[course]" as={`/${courseId}`} key={courseId}>
           <h2 className="p-20 underline ">
             <a className="cursor-pointer">{title}</a>
           </h2>
