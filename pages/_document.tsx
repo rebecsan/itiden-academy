@@ -31,8 +31,9 @@ const themeScript = `
     // source of truth from localStorage
     setClassOnDocumentHtml(localStorageTheme);
   } else {
-    // source of truth from document.body
-    var isDarkMode = document.documentElement.classList.contains(classNameDark);
+    // Default to darkmode
+    setClassOnDocumentHtml("true")
+    var isDarkMode = true;
     localStorage.setItem(storageKey, JSON.stringify(isDarkMode));
   }
 })();
