@@ -10,7 +10,7 @@ export const LessonArticle: React.FC<{
   // Scroll to expanded lesson
   const scrollTo = (ref: HTMLElement) => {
     if (ref) {
-      ref.scrollIntoView({ behavior: "smooth", block: "start" });
+      ref.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   };
 
