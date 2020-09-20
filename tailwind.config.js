@@ -5,7 +5,7 @@ module.exports = {
       custom: "0px 4px 4px rgba(0, 0, 0, 0.16)",
     },
     columnCount: [1, 2, 3],
-    darkSelector: ".mode-dark",
+    // darkSelector: "dark-mode",
     extend: {
       colors: {
         gray: {

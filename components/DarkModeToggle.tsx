@@ -2,11 +2,12 @@ import useDarkMode from "use-dark-mode";
 import Toggle from "./Toggle";
 
 const DarkModeToggle = () => {
-  // if (!process.browser) {
-  //   return null;
-  // }
+  //   if (!window.document) {
+  //     return null;
+  //   }
+
   const darkMode = useDarkMode(true, {
-    // element: document.documentElement
+    // element: document.documentElement,
     // element: document.getElementsByTagName("html")[0],
   });
 
