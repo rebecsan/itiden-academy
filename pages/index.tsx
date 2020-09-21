@@ -37,7 +37,7 @@ export type HomeProps = {
 };
 
 const Home: React.FC<HomeProps> = ({ courses: courses }) => (
-  <Layout>
+  <>
     <Header />
     <main className="flex-grow flex flex-col z-10 pt-64 max-w-5xl mx-auto">
       <h2 className="self-center text-3xl ">Våra kurser:</h2>
@@ -49,7 +49,7 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
         </Link>
       ))}
     </main>
-  </Layout>
+  </>
 );
 export default Home;
 
