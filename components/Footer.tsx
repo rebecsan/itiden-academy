@@ -1,4 +1,4 @@
-import DarkModeToggle from "./DarkModeToggle";
+import Toggle from "./Toggle";
 
 export const Footer: React.FC = () => (
   <>
@@ -17,7 +17,7 @@ export const Footer: React.FC = () => (
           ></img>
         </section>
         <div className="md:hidden">
-          <DarkModeToggle />
+          <Toggle />
         </div>
         {/* Line between sections */}
         <div className="h-1px bg-gray-300 dark:bg-gray-600 w-full my-4 md:hidden"></div>
@@ -46,7 +46,7 @@ export const Footer: React.FC = () => (
         </section>
         <section className="flex flex-col justify-end md:justify-start">
           <div className="hidden md:block">
-            <DarkModeToggle />
+            <Toggle />
           </div>
           <div className="flex flex-row">
             <a href="https://www.facebook.com/itiden">
