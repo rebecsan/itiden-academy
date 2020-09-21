@@ -1,12 +1,10 @@
 import { Lesson } from "../pages";
-import useDarkMode from "use-dark-mode";
 
 export const LessonArticle: React.FC<{
   lesson: Lesson;
   expand: boolean;
   onClick(id: number): void;
 }> = ({ lesson, expand, onClick }) => {
-  const darkMode = useDarkMode();
   // Scroll to expanded lesson
   const scrollTo = (ref: HTMLElement) => {
     if (ref) {

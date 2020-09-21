@@ -36,6 +36,9 @@ module.exports = {
     height: {
       "1px": "1px",
     },
+    textTransform: {
+      smallCaps: "small-caps",
+    },
   },
   variants: {
     backgroundColor: ["responsive", "dark"],
