@@ -69,7 +69,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
               alt="itiden logo"
               className="block dark:hidden"
             ></img>
-            {subTitle && <h1 className="self-center smallCaps">{subTitle}</h1>}
+            {subTitle && <h1 className="sub-title self-center">{subTitle}</h1>}
           </motion.section>
         </div>
       </header>
