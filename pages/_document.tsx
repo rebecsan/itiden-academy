@@ -31,9 +31,9 @@ const themeScript = `
     // source of truth from localStorage
     setClassOnDocumentBody(localStorageTheme);
   } else {
-    // source of truth from document.body
-    var isDarkMode = document.body.classList.contains(classNameDark);
-    localStorage.setItem(storageKey, JSON.stringify(isDarkMode));
+    // add darkmode as default
+    document.body.classList.add(classNameDark);
+    localStorage.setItem(storageKey, "true");
   }
 })();
 `;
@@ -48,7 +48,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head></Head>
-        <body className="bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 font-document dark-mode">
+        <body className="bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 font-document">
           <script dangerouslySetInnerHTML={{ __html: themeScript }}></script>
           <Main />
           <NextScript />

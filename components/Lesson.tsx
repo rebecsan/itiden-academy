@@ -64,13 +64,15 @@ export const LessonArticle: React.FC<{
                     {title}
                     <div className="pl-3 inline self-center">
                       <img
-                        src={
-                          darkMode.value
-                            ? "/linkicon.svg"
-                            : "/linkiconlight.svg"
-                        }
+                        src="/linkicon.svg"
                         alt="open link icon"
-                      />
+                        className="hidden dark:block"
+                      ></img>
+                      <img
+                        src="/linkiconlight.svg"
+                        alt="open link icon"
+                        className="block dark:hidden"
+                      ></img>
                     </div>
                   </a>
                 ))}

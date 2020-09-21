@@ -5,7 +5,6 @@ module.exports = {
       custom: "0px 4px 4px rgba(0, 0, 0, 0.16)",
     },
     columnCount: [1, 2, 3],
-    // darkSelector: "dark-mode",
     extend: {
       colors: {
         gray: {
@@ -40,16 +39,16 @@ module.exports = {
   },
   variants: {
     backgroundColor: ["responsive", "dark"],
-    textColor: ["responsive", "dark"],
     columnCount: ["responsive"],
-    padding: ["first", "last"],
+    display: ["responsive", "dark"],
     margin: ["first", "last"],
+    padding: ["first", "last"],
+    textColor: ["responsive", "dark"],
   },
   plugins: [
     // Divide contents of flex container into several columns
     require("tailwindcss-multi-column")(),
     // Add variants for darkmode
-    // require("tailwindcss-dark-mode")(),
     require("@danestves/tailwindcss-darkmode")(),
   ],
   future: {

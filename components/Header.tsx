@@ -62,8 +62,14 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             style={{ opacity: logoOpacity, scale: logoScale }}
           >
             <img
-              src={darkMode.value ? "/itiden.svg" : "/itidendark.svg"}
+              src="/itiden.svg"
               alt="itiden logo"
+              className="hidden dark:block"
+            ></img>
+            <img
+              src="/itidendark.svg"
+              alt="itiden logo"
+              className="block dark:hidden"
             ></img>
             {subTitle && <h1 className="self-center uppercase">{subTitle}</h1>}
           </motion.section>
