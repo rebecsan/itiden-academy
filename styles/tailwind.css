@@ -50,7 +50,7 @@ h4 {
   color: #505050;
   line-height: 1rem;
 }
-dark-mode h4 {
+.dark-mode h4 {
   color: #808080;
 }
 

@@ -41,8 +41,8 @@ module.exports = {
     backgroundColor: ["responsive", "dark"],
     columnCount: ["responsive"],
     display: ["responsive", "dark"],
-    margin: ["first", "last"],
-    padding: ["first", "last"],
+    margin: ["responsive", "first", "last"],
+    padding: ["responsive", "first", "last"],
     textColor: ["responsive", "dark"],
   },
   plugins: [

@@ -17,7 +17,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
       )
     : 1;
 
-  // Scale down contact link to 80% on scroll down
+  // Scale down contact link to 90% on scroll down
   const linkScale = useTransform(scrollY, (headerScrollPos) =>
     Math.max(0.9, 1 - (0.4 * headerScrollPos) / headerHeight())
   );
@@ -32,8 +32,12 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
         {/* Purple logo */}
         <div className="flex justify-between">
           <img
-            className="flex-grow-0 justify-self-start mx-4 lg:mx-0 top-0"
+            className="flex-grow-0 justify-self-start mx-4 lg:mx-0 top-0 md:hidden"
             src="/logosm.svg"
+          ></img>
+          <img
+            className="flex-grow-0 justify-self-start mx-4 lg:mx-0 top-0 hidden md:block"
+            src="/logolg.svg"
           ></img>
           {/* <motion.div className="div">
             
@@ -55,7 +59,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
           {/* Shrink and change opacity on itiden-logo and page title */}
           <motion.section
             className={
-              "fixed flex flex-col max-w-5xl py-40 z-0 left-0 right-0 mx-auto"
+              "fixed flex flex-col max-w-5xl py-40 z-0 left-0 right-0 mx-auto md:pt-16 md:mx-40 md:right-auto md:left-auto"
             }
             style={{ opacity: logoOpacity, scale: logoScale }}
           >
@@ -69,7 +73,11 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
               alt="itiden logo"
               className="block dark:hidden"
             ></img>
-            {subTitle && <h1 className="sub-title self-center">{subTitle}</h1>}
+            {subTitle && (
+              <h1 className="sub-title pt-1 self-center md:self-start">
+                {subTitle}
+              </h1>
+            )}
           </motion.section>
         </div>
       </header>
