@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@danestves/tailwindcss-darkmode": "^1.1.5",
-    "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.8.6",
     "framer-motion": "^2.6.4",
     "lottie-web": "^5.7.3",

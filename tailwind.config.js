@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ["pages/**/*", "components/**/*"],
   theme: {
     boxShadow: {
       custom: "0px 4px 4px rgba(0, 0, 0, 0.16)",
