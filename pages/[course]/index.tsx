@@ -5,10 +5,14 @@ import { getLessonData, getAllCourseIds } from "../../lib/getCourses";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Course } from "..";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   const router = useRouter();
   const { lesson: lessonid } = router.query;
+  if (lessonid == undefined && typeof window !== "undefined") {
+    window.scrollTo(0, 0);
+  }
 
   function handleLessonClick(id: number) {
     // Remove query param and if id != query.lesson: replace with new
