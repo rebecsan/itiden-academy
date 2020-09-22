@@ -1,4 +1,5 @@
 import { Lesson } from "../pages";
+import LottieArrow from "./LottieArrow";
 
 export const LessonArticle: React.FC<{
   lesson: Lesson;
@@ -31,10 +32,7 @@ export const LessonArticle: React.FC<{
             </h3>
             <h2>{lesson.subject}</h2>
           </div>
-          <img
-            src={expand ? "/collapseicon.svg" : "/expandicon.svg"}
-            alt="collapse section icon"
-          />
+          <LottieArrow expand={expand} />
         </section>
         {/* Lesson description and links */}
         <section className={expand ? "block" : "hidden"}>

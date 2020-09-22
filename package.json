@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@crello/react-lottie": "^0.0.9",
     "@danestves/tailwindcss-darkmode": "^1.1.5",
     "autoprefixer": "^9.8.6",
     "framer-motion": "^2.6.4",
