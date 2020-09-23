@@ -34,10 +34,10 @@ export const LessonArticle: React.FC<{
             <h2>{lesson.subject}</h2>
           </div>
           {/* Animated collapse/expand icon */}
-          <div className="w-7 hidden dark:block">
+          <div className="self-center hidden dark:block">
             <LottieChevron expand={expand} />
           </div>
-          <div className="w-7 dark:hidden">
+          <div className="self-center dark:hidden">
             <DarkLottieChevron expand={expand} />
           </div>
         </section>

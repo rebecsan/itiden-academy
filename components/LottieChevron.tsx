@@ -8,6 +8,8 @@ export const LottieChevron: React.FC<{
     <Lottie
       config={{ animationData, autoplay: false }}
       direction={expand ? 1 : -1}
+      width="31px"
+      height="19px"
     />
   );
 };
