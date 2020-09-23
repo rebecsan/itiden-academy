@@ -16,17 +16,17 @@ export const LessonArticle: React.FC<{
 
   return (
     <>
-      <article
-        onClick={() => {
-          onClick(lesson.id);
-        }}
-        className="bg-gray-200 dark:bg-gray-700 mb-10 w-screen lg:max-w-5xl"
-        id={`lesson${lesson.id}`}
-        key={lesson.id}
-        ref={scrollTo}
-      >
+      <article className="bg-gray-200 dark:bg-gray-700 mb-10 w-screen lg:max-w-5xl">
         {/* Lesson info with title and week */}
-        <section className="flex justify-between px-4">
+        <section
+          onClick={() => {
+            onClick(lesson.id);
+          }}
+          id={`lesson${lesson.id}`}
+          key={lesson.id}
+          ref={scrollTo}
+          className="flex justify-between px-4"
+        >
           <div className="py-3">
             <h2>
               v {lesson.week} - Lektion {lesson.id}
