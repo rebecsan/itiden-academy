@@ -1,20 +1,12 @@
 import Toggle from "./Toggle";
+import ItidenSmall from "./ItidenSmall";
 
 export const Footer: React.FC = () => (
   <>
     <footer className="bg-white text-gray-500 dark:bg-gray-900 dark:text-gray-400 border-t border-purple-700 py-6 bottom-0 mt-6">
       <div className="max-w-5xl px-4 mx-auto flex flex-wrap justify-between md:flex-1 md:flex-no-wrap">
         <section>
-          <img
-            src="/itidensm.svg"
-            alt="itiden logo"
-            className="hidden dark:block"
-          ></img>
-          <img
-            src="/itidensmdark.svg"
-            alt="itiden dark logo"
-            className="block dark:hidden"
-          ></img>
+          <ItidenSmall />
         </section>
         <div className="md:hidden">
           <Toggle />

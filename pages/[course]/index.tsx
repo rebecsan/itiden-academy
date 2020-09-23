@@ -10,7 +10,7 @@ import { useEffect } from "react";
 const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
   const router = useRouter();
   const { lesson: lessonid } = router.query;
-  if (lessonid == undefined && typeof window !== "undefined") {
+  if (router.query.lesson == undefined && typeof window !== "undefined") {
     window.scrollTo(0, 0);
   }
 

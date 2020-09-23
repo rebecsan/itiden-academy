@@ -10,7 +10,6 @@ const Toggle = () => {
           type="checkbox"
           id="toggle"
           className="checkbox"
-          // checked={document.body.classList.contains("dark-mode") ? true : false}
           checked={darkMode.value}
           onChange={darkMode.toggle}
         />

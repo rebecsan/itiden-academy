@@ -41,6 +41,7 @@ module.exports = {
     backgroundColor: ["responsive", "dark"],
     columnCount: ["responsive"],
     display: ["responsive", "dark"],
+    fill: ["responsive", "hover", "focus", "dark"],
     margin: ["responsive", "first", "last"],
     padding: ["responsive", "first", "last"],
     textColor: ["responsive", "dark"],
