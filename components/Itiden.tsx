@@ -5,7 +5,7 @@ export const Itiden: React.FC = () => (
     viewBox="0 0 120 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="self-center fill-current text-gray-600 dark:text-gray-300"
+    className="fill-current text-gray-600 dark:text-gray-300"
   >
     <g clipPath="url(#clip0)">
       <path

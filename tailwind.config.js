@@ -39,6 +39,7 @@ module.exports = {
   },
   variants: {
     backgroundColor: ["responsive", "dark"],
+    backgroundOpacity: ["responsive", "hover", "focus", "dark"],
     columnCount: ["responsive"],
     display: ["responsive", "dark"],
     fill: ["responsive", "hover", "focus", "dark"],
