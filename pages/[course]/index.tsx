@@ -33,6 +33,10 @@ const CoursePage: React.FC<{ courseData: Course }> = ({ courseData }) => {
     <>
       <Head>
         <title>{courseData.title + " - itiden Academy"}</title>
+        <meta
+          name="Description"
+          content={"Itiden Academy's " + courseData.title + " course material"}
+        />
       </Head>
       <Header {...{ subTitle: courseData.courseId }} />
       <main className="flex-grow z-10 pt-64 max-w-5xl mx-auto">

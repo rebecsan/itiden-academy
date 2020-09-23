@@ -14,7 +14,7 @@ export const Footer: React.FC = () => (
         {/* Line between sections */}
         <div className="h-1px bg-gray-300 dark:bg-gray-600 w-full my-4 md:hidden"></div>
         <section className="flex flex-col items-start w-full md:w-auto">
-          <h3>Kursansvariga</h3>
+          <h2>Kursansvariga</h2>
           <a
             href="mailto:andreas@itiden.se"
             className="text-purple-700 dark:text-teal-400 underline py-2"
@@ -42,13 +42,20 @@ export const Footer: React.FC = () => (
           </div>
           <div className="flex flex-row">
             <a href="https://www.facebook.com/itiden">
-              <img src="/fb.svg"></img>
+              <span className="sr-only">Itiden on Facebook</span>
+              <img src="/fb.svg" alt="Facebook logo"></img>
             </a>
             <a href="https://www.linkedin.com/company/itiden/">
-              <img className="px-4" src="/linkedin.svg"></img>
+              <span className="sr-only">Itiden onLinkedIn</span>
+              <img
+                className="px-4"
+                src="/linkedin.svg"
+                alt="Linkedin logo"
+              ></img>
             </a>
             <a href="https://www.instagram.com/itidenab/">
-              <img src="/instagram.svg"></img>
+              <span className="sr-only">Itiden on Instagram</span>
+              <img src="/instagram.svg" alt="Instagram logo"></img>
             </a>
           </div>
         </section>

@@ -28,10 +28,10 @@ export const LessonArticle: React.FC<{
         {/* Lesson info with title and week */}
         <section className="flex justify-between px-4">
           <div className="py-3">
-            <h3>
+            <h2>
               v {lesson.week} - Lektion {lesson.id}
-            </h3>
-            <h2>{lesson.subject}</h2>
+            </h2>
+            <h3>{lesson.subject}</h3>
           </div>
           {/* Animated collapse/expand icon */}
           <div className="self-center hidden dark:block">

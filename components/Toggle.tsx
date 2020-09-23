@@ -8,17 +8,17 @@ const Toggle = () => {
       <section className="flex flex-col md:hidden">
         <input
           type="checkbox"
-          id="toggle"
+          id="toggle-button"
           className="checkbox"
           checked={darkMode.value}
           onChange={darkMode.toggle}
         />
         <label
-          htmlFor="toggle"
+          htmlFor="toggle-button"
           className="switch bg-purple-700 dark:bg-teal-400 self-end"
         ></label>
-        <label htmlFor="toggle" className="mt-2">
-          <h3>Ljust/Mörkt</h3>
+        <label htmlFor="toggle-button" className="mt-2">
+          <h2>Ljust/Mörkt</h2>
         </label>
       </section>
       <div

@@ -40,12 +40,12 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
   <>
     <Header />
     <main className="flex-grow flex flex-col z-10 pt-64 max-w-5xl mx-auto">
-      <h2 className="self-center text-3xl ">Våra kurser:</h2>
+      <h3 className="self-center text-3xl ">Våra kurser:</h3>
       {courses.map(({ courseId, title }) => (
         <Link href="[course]" as={`/${courseId}`} key={courseId}>
-          <h2 className="p-20 underline ">
-            <a className="cursor-pointer">{title}</a>
-          </h2>
+          <h3 className="p-16 underline">
+            <a className="cursor-pointer text-teal-400">{title}</a>
+          </h3>
         </Link>
       ))}
     </main>

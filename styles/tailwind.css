@@ -31,18 +31,18 @@ h1 {
 }
 
 h2 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+h3 {
   font-size: 1.5rem;
   line-height: 2rem;
   color: #2d2d2d;
 }
 
-.dark-mode h2 {
+.dark-mode h3 {
   color: #ebebeb;
-}
-
-h3 {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 h4 {

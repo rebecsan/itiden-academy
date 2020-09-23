@@ -46,8 +46,15 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <Head></Head>
+      <Html lang="sv">
+        <Head>
+          <meta name="Description" content="Itiden ."></meta>
+          <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/public/favicon.ico"
+          />
+        </Head>
         <body className="bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 font-document">
           <script dangerouslySetInnerHTML={{ __html: themeScript }}></script>
           <Main />

@@ -8,6 +8,7 @@ const Layout: React.FC = ({ children }) => (
         name="viewport"
         content="width=device-width, minimum-scale=1, initial-scale=1"
       />
+      <meta name="Description" content="List of courses from Itiden Academy" />
       <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap"
         rel="stylesheet"
