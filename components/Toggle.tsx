@@ -2,7 +2,7 @@ import useDarkMode from "use-dark-mode";
 
 const Toggle = () => {
   const darkMode = useDarkMode(true);
-  console.log(darkMode.value);
+
   return (
     <div className="flex justify-end">
       <section className="flex flex-col md:hidden">
