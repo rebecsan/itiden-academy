@@ -1,5 +1,6 @@
 import { Lesson } from "../pages";
-import LottieArrow from "./LottieArrow";
+import LottieChevron from "./LottieChevron";
+import DarkLottieChevron from "./DarkLottieChevron";
 
 export const LessonArticle: React.FC<{
   lesson: Lesson;
@@ -32,7 +33,13 @@ export const LessonArticle: React.FC<{
             </h3>
             <h2>{lesson.subject}</h2>
           </div>
-          <LottieArrow expand={expand} />
+          {/* Animated collapse/expand icon */}
+          <div className="w-7 hidden dark:block">
+            <LottieChevron expand={expand} />
+          </div>
+          <div className="w-7 dark:hidden">
+            <DarkLottieChevron expand={expand} />
+          </div>
         </section>
         {/* Lesson description and links */}
         <section className={expand ? "block" : "hidden"}>
@@ -50,25 +57,26 @@ export const LessonArticle: React.FC<{
                   {/* Line on left side of category title */}
                   <div className="h-1px bg-gray-300 dark:bg-gray-600 flex-grow m-auto"></div>
                 </div>
+                {/* Render each link with linkicon */}
                 {items.map(({ title, url }) => (
-                  // Render each link with linkicon
                   <a
                     className="flex pb-4 text-purple-700 dark:text-teal-400 underline"
                     key={title}
                     href={url}
                   >
                     {title}
+                    {/* Linkicon */}
                     <div className="pl-3 inline self-center">
-                      <img
-                        src="/linkicon.svg"
-                        alt="open link icon"
-                        className="hidden dark:block"
-                      ></img>
-                      <img
-                        src="/linkiconlight.svg"
-                        alt="open link icon"
-                        className="block dark:hidden"
-                      ></img>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="fill-current text-gray-350 dark:text-gray-500"
+                      >
+                        <path d="M16 16H2V2H9V0H2C0.89 0 0 0.9 0 2V16C0 17.1 0.89 18 2 18H16C17.1 18 18 17.1 18 16V9H16V16ZM11 0V2H14.59L4.76 11.83L6.17 13.24L16 3.41V7H18V0H11Z" />
+                      </svg>
                     </div>
                   </a>
                 ))}
