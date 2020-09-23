@@ -1,5 +1,5 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Itiden from "./Itiden";
 import ItidenSmallLight from "./ItidenSmallLight";
 
