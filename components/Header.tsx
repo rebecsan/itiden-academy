@@ -7,7 +7,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
   // Use scroll to animate header with Framer motion
   const { scrollY } = useViewportScroll();
   const logoPos = useTransform(scrollY, (scrollPos) =>
-    Math.min(0, scrollPos - 150)
+    Math.min(0, scrollPos - 200)
   );
   // Calculate height of header
   const header = useRef<HTMLElement>(null);
@@ -56,14 +56,14 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
           {/* Shrink purple e-mail box */}
           <div className="fixed flex flex-col max-w-5xl left-0 right-0 mx-auto w-screen z-20">
             <motion.div
-              className="bg-purple-700 shadow-custom self-end w-48 flex mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full"
+              className="bg-purple-700 shadow-custom self-end flex flex-col mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full"
               style={{ scale: linkScale }}
             >
               <a
                 href="mailto:academy@itiden.se"
                 className="self-center text-lightblue"
               >
-                academy@itiden.se
+                {subTitle}@itiden.se
               </a>
             </motion.div>
           </div>
@@ -76,7 +76,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
           >
             <Itiden />
             {subTitle && (
-              <h1 className="sub-title pt-1 self-center md:self-start">
+              <h1 className="sub-title pt-1 tracking-widest self-center md:self-start">
                 {subTitle}
               </h1>
             )}
