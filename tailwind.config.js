@@ -36,6 +36,9 @@ module.exports = {
     height: {
       "1px": "1px",
     },
+    opacity: {
+      90: ".9",
+    },
   },
   variants: {
     backgroundColor: ["responsive", "dark"],

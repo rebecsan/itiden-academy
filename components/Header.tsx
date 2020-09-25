@@ -43,7 +43,7 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             alt="Itiden logo. Inverted purple triangle with cutoff top."
           ></img>
           <motion.div
-            className="fixed flex flex-col bg-gray-100 bg-opacity-75 dark:bg-gray-800 dark:bg-opacity-75 h-10 items-start max-w-5xl z-20 left-0 right-0 mx-auto w-screen"
+            className="fixed flex flex-col bg-gray-100 bg-opacity-90 dark:bg-gray-800 dark:bg-opacity-90 h-10 items-start max-w-5xl z-20 left-0 right-0 mx-auto w-screen"
             style={{ y: logoPos }}
           >
             <div className="self-start w-48 m-4 ml-4 hidden md:block">
