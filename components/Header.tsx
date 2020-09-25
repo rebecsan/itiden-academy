@@ -26,6 +26,8 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
   const logoScale = useTransform(scrollY, (headerScrollPos) =>
     Math.max(0.6, 1 - (0.1 * headerScrollPos) / headerHeight())
   );
+  let contact;
+  subTitle ? (contact = subTitle + "@itiden.se") : (contact = "info@itiden.se");
 
   return (
     <>
@@ -60,10 +62,10 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
               style={{ scale: linkScale }}
             >
               <a
-                href="mailto:academy@itiden.se"
+                href={"mailto:" + contact}
                 className="self-center text-lightblue"
               >
-                {subTitle}@itiden.se
+                {contact}
               </a>
             </motion.div>
           </div>
