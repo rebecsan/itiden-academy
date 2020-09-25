@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { getCoursesData } from "../lib/getCourses";
 import { GetStaticProps } from "next";
-import Layout from "../components/Layout";
 import { Header } from "../components/Header";
 
 export type Course = {
@@ -44,7 +43,9 @@ const Home: React.FC<HomeProps> = ({ courses: courses }) => (
       {courses.map(({ courseId, title }) => (
         <Link href="[course]" as={`/${courseId}`} key={courseId}>
           <h3 className="p-16 underline">
-            <a className="cursor-pointer text-teal-400">{title}</a>
+            <a className="cursor-pointer text-purple-700 dark:text-teal-400">
+              {title}
+            </a>
           </h3>
         </Link>
       ))}
