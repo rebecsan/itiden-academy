@@ -74,11 +74,11 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
             style={{ opacity: logoOpacity, scale: logoScale }}
           >
             <Itiden />
-            {subTitle && (
+            {subTitle ? (
               <h1 className="sub-title pt-1 tracking-widest self-center md:self-start">
                 {subTitle}
               </h1>
-            )}
+            ) : null}
           </motion.section>
         </div>
       </header>

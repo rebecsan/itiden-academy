@@ -71,7 +71,7 @@ export const LessonArticle: React.FC<{
         </section>
         {/* Lesson description and links */}
         <AnimatePresence exitBeforeEnter={true} initial={false}>
-          {expand && (
+          {expand ? (
             <motion.section
               key={lesson.id}
               style={{ overflow: "hidden" }}
@@ -82,13 +82,18 @@ export const LessonArticle: React.FC<{
             >
               {/* Description */}
               <div className="bg-gray-250 dark:bg-gray-600">
-                <p className="px-4 py-3 md:col-count-2">{lesson.description}</p>
+                <section
+                  className="px-4 py-3 md:w-4/5"
+                  dangerouslySetInnerHTML={{ __html: lesson.description }}
+                >
+                  {/* {lesson.description} */}
+                </section>
               </div>
               {/* Links */}
-              <section className="px-4 pt-5 pb-1">
+              <section className="px-4 pt-1 pb-1">
                 {lesson.links.map(({ category, items }) => (
                   <div className="flex flex-col items-start" key={category}>
-                    <div className="flex mb-3 w-full">
+                    <div className="flex mb-3 mt-4 w-full">
                       {/* Category title */}
                       <h4 className="pr-3">{category}</h4>
                       {/* Line on left side of category title */}
@@ -112,7 +117,7 @@ export const LessonArticle: React.FC<{
                 ))}
               </section>
             </motion.section>
-          )}
+          ) : null}
         </AnimatePresence>
       </article>
     </>
