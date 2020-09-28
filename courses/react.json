@@ -5,7 +5,7 @@
       "id": 1,
       "week": 40,
       "subject": "Vad är React?",
-      "description": "<p class=\"mb-2\">Fokus på att förstå vad React är och när man använder det.</p> <p>Kika på olika koncept och beskrivningar av hur man använder React.</p>",
+      "description": "<p style=\"margin-bottom:8px;\">Fokus på att förstå vad React är och när man använder det.</p> <p>Kika på olika koncept och beskrivningar av hur man använder React.</p>",
       "links": [
         {
           "category": "Handledning",
@@ -17,26 +17,31 @@
           ]
         },
         {
-          "category": "Pluralsight",
+          "category": "Pluralsight - React: Getting Started",
           "items": [
             {
-              "title": "React: Getting Started, The Basics - 57m",
+              "title": "The Basics - 57m",
               "url": "https://app.pluralsight.com/player?name=react-js-getting-started-m1&mode=live&clip=2&course=react-js-getting-started"
             },
             {
-              "title": "React: Getting Started, Modern Javascript - 22m",
+              "title": "Modern Javascript - 22m",
               "url": "https://app.pluralsight.com/player?name=react-js-getting-started-m2&mode=live&clip=3&course=react-js-getting-started"
-            },
+            }
+          ]
+        },
+        {
+          "category": "Pluralsight - React Fundamentals",
+          "items": [
             {
-              "title": "React Fundamentals, Introducing React - 21m",
+              "title": "Introducing React - 21m",
               "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=211de11a-16ae-4cdb-95ac-9909a703d20f&clip=0&mode=live"
             },
             {
-              "title": "React Fundamentals, Components - 37m",
+              "title": "Components - 37m",
               "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=e9ea2969-bb57-41fa-8b90-fd904a4742d9&clip=0&mode=live"
             },
             {
-              "title": "React Fundamentals, JSX - 35m",
+              "title": "JSX - 35m",
               "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=3b2ef28b-5f9f-4d02-a78a-6b5b85f91c8c&clip=0&mode=live"
             }
           ]
@@ -73,7 +78,7 @@
       "id": 2,
       "week": 41,
       "subject": "Grunderna fortsättning",
-      "description": "<p class=\"mb-2\">Fortsättning på grunderna i React.</p> <p>Gör Quiz 1 på ITHS-distans.</p>",
+      "description": "<p style=\"margin-bottom:8px;\">Fortsättning på grunderna i React.</p> <p>Gör Quiz 1 på ITHS-distans.</p>",
       "links": [
         {
           "category": "Handledning",
@@ -94,18 +99,18 @@
           ]
         },
         {
-          "category": "Pluralsight",
+          "category": "Pluralsight - React Fundamentals",
           "items": [
             {
-              "title": "React Fundamentals, Events - 31m",
+              "title": "Events - 31m",
               "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=7afe7605-47f9-4da7-a319-98bb395da9fe&clip=0&mode=live"
             },
             {
-              "title": "React Fundamentals, Forms - 59m",
+              "title": "Forms - 59m",
               "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=b865b691-ffba-4471-9c3c-fe77ed9f5fe0&clip=0&mode=live"
             },
             {
-              "title": "React Fundamentals, State - 66m",
+              "title": "State - 66m",
               "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=46ec189f-431e-41b4-b6f2-c65ebb9e12c9&clip=0&mode=live"
             }
           ]
@@ -141,22 +146,27 @@
           ]
         },
         {
-          "category": "Pluralsight",
+          "category": "Pluralsight - React: Getting Started",
           "items": [
             {
-              "title": "React: Getting Started, Setting up a development environment - 40m",
+              "title": "Setting up a development environment - 40m",
               "url": "https://app.pluralsight.com/player?course=react-js-getting-started&author=samer-buna&name=react-js-getting-started-m5&clip=0&mode=live"
             },
             {
-              "title": "React: Getting Started, The GitHub Cards App - 42m (klass komponenter)",
+              "title": "The GitHub Cards App - 42m (klass komponenter)",
               "url": "https://app.pluralsight.com/player?course=react-js-getting-started&author=samer-buna&name=react-js-getting-started-m3&clip=0&mode=live"
             },
             {
-              "title": "React Getting Started, The Star Match Game - 77m (funktions komponenter)",
+              "title": "The Star Match Game - 77m (funktions komponenter)",
               "url": "https://app.pluralsight.com/player?course=react-js-getting-started&author=samer-buna&name=react-js-getting-started-m4&clip=0&mode=live"
-            },
+            }
+          ]
+        },
+        {
+          "category": "Pluralsight - Using React Hooks",
+          "items": [
             {
-              "title": "Using React Hooks, Start using React Hooks - 42m",
+              "title": "Start using React Hooks - 42m",
               "url": "https://app.pluralsight.com/player?course=using-react-hooks&author=peter-kellner&name=253760e5-c9ec-4ff9-aec3-21ea38bb31fb&clip=0&mode=live"
             }
           ]
@@ -185,7 +195,7 @@
       "id": 4,
       "week": 43,
       "subject": "Repetition",
-      "description": "<p class=\"mb-2\">Se över kunskapen du lärt dig tidigare veckor och fokusera på labb 1.</p> <p>Gör quiz 2 på ITHS-distans.</p>",
+      "description": "<p style=\"margin-bottom:8px;\">Se över kunskapen du lärt dig tidigare veckor och fokusera på labb 1.</p> <p>Gör quiz 2 på ITHS-distans.</p>",
       "links": [
         {
           "category": "Handledning",
