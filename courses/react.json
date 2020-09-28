@@ -3,19 +3,49 @@
   "lessons": [
     {
       "id": 1,
-      "week": 36,
+      "week": 40,
       "subject": "Vad är React?",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus laoreet sed neque in facilisis lacus. A eget egestas mauris est. Laoreet est etiam massa luctus id tincidunt duis pellentesque. Neque mi amet sem elementum et vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus laoreet sed neque in facilisis lacus. A eget egestas mauris est. Laoreet est etiam massa luctus id tincidunt duis pellentesque. Neque mi amet sem elementum et vulputate.",
+      "description": "<p class=\"mb-2\">Fokus på att förstå vad React är och när man använder det.</p> <p>Kika på olika koncept och beskrivningar av hur man använder React.</p>",
       "links": [
         {
-          "category": "Videos",
+          "category": "Handledning",
           "items": [
             {
-              "title": "What is React?",
-              "url": "https://reactjs.org/"
+              "title": "Google Meet, tisdag 29 september 11.00 - 13.00",
+              "url": "http://meet.google.com/zis-igte-qpb"
+            }
+          ]
+        },
+        {
+          "category": "Pluralsight",
+          "items": [
+            {
+              "title": "React: Getting Started, The Basics - 57m",
+              "url": "https://app.pluralsight.com/player?name=react-js-getting-started-m1&mode=live&clip=2&course=react-js-getting-started"
             },
             {
-              "title": "React 101?",
+              "title": "React: Getting Started, Modern Javascript - 22m",
+              "url": "https://app.pluralsight.com/player?name=react-js-getting-started-m2&mode=live&clip=3&course=react-js-getting-started"
+            },
+            {
+              "title": "React Fundamentals, Introducing React - 21m",
+              "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=211de11a-16ae-4cdb-95ac-9909a703d20f&clip=0&mode=live"
+            },
+            {
+              "title": "React Fundamentals, Components - 37m",
+              "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=e9ea2969-bb57-41fa-8b90-fd904a4742d9&clip=0&mode=live"
+            },
+            {
+              "title": "React Fundamentals, JSX - 35m",
+              "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=3b2ef28b-5f9f-4d02-a78a-6b5b85f91c8c&clip=0&mode=live"
+            }
+          ]
+        },
+        {
+          "category": "Tutorial",
+          "items": [
+            {
+              "title": "Intro to React - Följ tutorial och bygg ett spel i React",
               "url": "https://reactjs.org/tutorial/tutorial.html"
             }
           ]
@@ -24,8 +54,16 @@
           "category": "Övrigt",
           "items": [
             {
-              "title": "React from dummy to pro in a week",
-              "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
+              "title": "React dokumentation",
+              "url": "https://reactjs.org/docs/getting-started.html"
+            },
+            {
+              "title": "React Core Team - Följ dem gärna på Twitter",
+              "url": "https://reactjs.org/community/team.html"
+            },
+            {
+              "title": "Why I Love React by Kent C. Dodds",
+              "url": "https://epicreact.dev/why-i-love-react/"
             }
           ]
         }
@@ -33,16 +71,42 @@
     },
     {
       "id": 2,
-      "week": 37,
-      "subject": "Grunderna",
-      "description": " Mauris vel efficitur turpis, quis malesuada eros. Morbi tristique tellus nec urna accumsan vehicula. Phasellus blandit nulla ut risus pellentesque ullamcorper. Sed ut nibh sit amet justo faucibus convallis non sed ex. In mollis magna nec mauris tempor facilisis. Fusce eget mi vel odio hendrerit porta. Phasellus malesuada leo eu quam faucibus imperdiet. Nullam eu nibh convallis, congue est mattis, tincidunt augue. Nullam vitae facilisis ligula. Curabitur pellentesque in ipsum id tincidunt. Nam convallis eleifend risus vitae egestas. Nam ultrices nunc eu tincidunt tristique. <br/> Nullam feugiat ullamcorper sagittis. Pellentesque eu mauris nunc. Proin urna neque, volutpat sit amet maximus in, bibendum et nisl. Aenean vulputate nisl non ligula malesuada elementum. Donec hendrerit leo porttitor pharetra ultrices. Vestibulum ultricies, risus in tincidunt vulputate, sem elit rutrum libero, nec sollicitudin urna augue ut est. Pellentesque at auctor neque, vitae scelerisque nisl. Proin accumsan ipsum at neque pulvinar tincidunt. Praesent a egestas odio. Quisque tempor quis nisi ut ornare. Sed consequat aliquet libero eget dapibus. Aliquam ligula nisl, suscipit id iaculis a, accumsan non mauris. Mauris leo mi, elementum quis semper a, consectetur at nisl. <br/> Suspendisse ac dui convallis, maximus est a, ultricies nisl. Integer placerat sapien a neque ornare lobortis. Quisque tristique velit nec libero pretium feugiat. Fusce mollis, nunc quis aliquet iaculis, ante massa facilisis sapien, ut rhoncus tellus risus sed lorem. Duis pharetra velit velit, in consequat tellus pharetra vel. Fusce congue justo felis, a lacinia est porttitor vel. Nunc faucibus nibh diam, nec eleifend purus rhoncus dictum. Phasellus fermentum nisi vel justo fermentum ultrices tempus vitae ante. Integer bibendum felis dolor, et venenatis tellus gravida sit amet. Suspendisse sed placerat ante. Fusce sit amet pharetra nisl. Praesent commodo ligula non condimentum fermentum.",
+      "week": 41,
+      "subject": "Grunderna fortsättning",
+      "description": "<p class=\"mb-2\">Fortsättning på grunderna i React.</p> <p>Gör Quiz 1 på ITHS-distans.</p>",
       "links": [
         {
-          "category": "Videos",
+          "category": "Handledning",
           "items": [
             {
-              "title": "Getting started with React",
-              "url": "https://reactjs.org/"
+              "title": "Google Meet, tisdag 6 oktober 11.00 - 13.00",
+              "url": "http://meet.google.com/zis-igte-qpb"
+            }
+          ]
+        },
+        {
+          "category": "Uppgifter - ITHS-distans",
+          "items": [
+            {
+              "title": "Quiz 1",
+              "url": "https://www.ithsdistans.se/mod/quiz/view.php?id=15471"
+            }
+          ]
+        },
+        {
+          "category": "Pluralsight",
+          "items": [
+            {
+              "title": "React Fundamentals, Events - 31m",
+              "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=7afe7605-47f9-4da7-a319-98bb395da9fe&clip=0&mode=live"
+            },
+            {
+              "title": "React Fundamentals, Forms - 59m",
+              "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=b865b691-ffba-4471-9c3c-fe77ed9f5fe0&clip=0&mode=live"
+            },
+            {
+              "title": "React Fundamentals, State - 66m",
+              "url": "https://app.pluralsight.com/player?course=react-fundamentals-update&author=liam-mclennan&name=46ec189f-431e-41b4-b6f2-c65ebb9e12c9&clip=0&mode=live"
             }
           ]
         },
@@ -50,8 +114,115 @@
           "category": "Övrigt",
           "items": [
             {
-              "title": "React basics",
-              "url": "https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe"
+              "title": "React: Main Concepts - Läs igenom och följ guiden",
+              "url": "https://reactjs.org/docs/hello-world.html"
+            },
+            {
+              "title": "How to React by Kent C. Dodds",
+              "url": "https://kentcdodds.com/blog/how-to-react"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "week": 42,
+      "subject": "Hooks",
+      "description": "Sätt upp lokal utvecklingsmiljö och introduceras till hooks i React.",
+      "links": [
+        {
+          "category": "Handledning",
+          "items": [
+            {
+              "title": "Google Meet, tisdag 13 oktober 11.00 - 13.00",
+              "url": "http://meet.google.com/zis-igte-qpb"
+            }
+          ]
+        },
+        {
+          "category": "Pluralsight",
+          "items": [
+            {
+              "title": "React: Getting Started, Setting up a development environment - 40m",
+              "url": "https://app.pluralsight.com/player?course=react-js-getting-started&author=samer-buna&name=react-js-getting-started-m5&clip=0&mode=live"
+            },
+            {
+              "title": "React: Getting Started, The GitHub Cards App - 42m (klass komponenter)",
+              "url": "https://app.pluralsight.com/player?course=react-js-getting-started&author=samer-buna&name=react-js-getting-started-m3&clip=0&mode=live"
+            },
+            {
+              "title": "React Getting Started, The Star Match Game - 77m (funktions komponenter)",
+              "url": "https://app.pluralsight.com/player?course=react-js-getting-started&author=samer-buna&name=react-js-getting-started-m4&clip=0&mode=live"
+            },
+            {
+              "title": "Using React Hooks, Start using React Hooks - 42m",
+              "url": "https://app.pluralsight.com/player?course=using-react-hooks&author=peter-kellner&name=253760e5-c9ec-4ff9-aec3-21ea38bb31fb&clip=0&mode=live"
+            }
+          ]
+        },
+        {
+          "category": "Tutorial",
+          "items": [
+            {
+              "title": "Pluralsight Project - Build a Quiz Component with React",
+              "url": "https://app.pluralsight.com/projects/build-a-quiz-component-with-react"
+            }
+          ]
+        },
+        {
+          "category": "Övrigt",
+          "items": [
+            {
+              "title": "React Docs: Introducing Hooks - Läs kapitlen under Hooks",
+              "url": "https://reactjs.org/docs/hooks-intro.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "week": 43,
+      "subject": "Repetition",
+      "description": "<p class=\"mb-2\">Se över kunskapen du lärt dig tidigare veckor och fokusera på labb 1.</p> <p>Gör quiz 2 på ITHS-distans.</p>",
+      "links": [
+        {
+          "category": "Handledning",
+          "items": [
+            {
+              "title": "Google Meet, tisdag 20 oktober 11.00 - 13.00",
+              "url": "http://meet.google.com/zis-igte-qpb"
+            }
+          ]
+        },
+        {
+          "category": "Uppgifter - ITHS-distans",
+          "items": [
+            {
+              "title": "Quiz 2",
+              "url": "https://www.ithsdistans.se/mod/quiz/view.php?id=16187"
+            },
+            {
+              "title": "Laboration 1 - Deadline: Onsdag 21 oktober 15:00",
+              "url": "https://www.ithsdistans.se/mod/assign/view.php?id=16306&forceview=1"
+            }
+          ]
+        },
+        {
+          "category": "Övrigt",
+          "items": [
+            {
+              "title": "useState lazy initialization and function updates by Kent C. Dodds",
+              "url": "https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates"
+            },
+            {
+              "title": "Myths about useEffect by Kent C. Dodds",
+              "url": "https://epicreact.dev/myths-about-useeffect/"
+            },
+            {
+              "title": "Use ternaries rather than && in JSX by Kent C. Dodds",
+              "url": "https://kentcdodds.com/blog/use-ternaries-rather-than-and-and-in-jsx"
             }
           ]
         }
