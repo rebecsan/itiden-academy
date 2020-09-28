@@ -57,17 +57,14 @@ export const Header: React.FC<{ subTitle?: string }> = ({ subTitle }) => {
           </motion.div>
           {/* Shrink purple e-mail box */}
           <div className="fixed flex flex-col max-w-5xl left-0 right-0 mx-auto w-screen z-20">
-            <motion.div
-              className="bg-purple-700 shadow-custom self-end flex flex-col mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full"
+            <motion.a
+              className="bg-purple-700 shadow-custom self-end flex flex-col mt-5 mr-4 lg:mr-0 max-h-6 py-1 px-6 rounded-full  text-lightblue"
               style={{ scale: linkScale }}
+              href={"mailto:" + contact}
+              // className=""
             >
-              <a
-                href={"mailto:" + contact}
-                className="self-center text-lightblue"
-              >
-                {contact}
-              </a>
-            </motion.div>
+              {contact}
+            </motion.a>
           </div>
           {/* Shrink and change opacity on itiden-logo and page title */}
           <motion.section

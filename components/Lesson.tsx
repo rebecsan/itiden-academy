@@ -53,7 +53,7 @@ export const LessonArticle: React.FC<{
           onClick={() => {
             onClick(lesson.id);
           }}
-          className="flex justify-between px-4"
+          className="flex justify-between px-4 cursor-pointer"
         >
           <div className="py-3">
             <h2>

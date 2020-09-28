@@ -15,7 +15,7 @@ const Toggle = () => {
         />
         <label
           htmlFor="toggle-button"
-          className="switch bg-purple-700 dark:bg-teal-400 self-end"
+          className="switch cursor-pointer bg-purple-700 dark:bg-teal-400 self-end"
         ></label>
         <label htmlFor="toggle-button" className="mt-2">
           <h2>Ljust/Mörkt</h2>
