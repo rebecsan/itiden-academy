@@ -105,6 +105,8 @@ export const LessonArticle: React.FC<{
                         className="flex pb-4 text-purple-700 dark:text-teal-400 underline"
                         key={title}
                         href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {title}
                         {/* Linkicon */}
